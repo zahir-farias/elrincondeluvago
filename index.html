@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rincón del UVago - FACICO Universidad Veracruzana</title>
     <meta name="description" content="El portal retro de supervivencia, noticias diarias, apuntes, exámenes, libros, plantillas y herramientas de IA para estudiantes de Ciencias de la Comunicación en FACICO - Universidad Veracruzana (UV).">
-    <link rel="stylesheet" href="style.css?v=26">
+    <link rel="stylesheet" href="style.css?v=37">
     <!-- Google Fonts for Retro & Modern feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -269,14 +269,16 @@
 
                 <!-- Algorithm Status Bar -->
                 <div class="retro-card news-status-card">
-                    <div class="card-body news-status-body">
+                    <div class="card-body news-status-body" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <div class="status-indicator">
                             <span class="pulse-dot"></span>
-                            <span><b>Algoritmo RSS Sync UVago:</b> <span style="color: var(--color-uv-green);">Sincronizando 14 Portales en Vivo</span></span>
+                            <span><b>Algoritmo RSS Sync UVago:</b> <span id="newsSyncStatusText" style="color: var(--color-uv-green);">Sincronizando 14 Portales en Vivo</span></span>
                         </div>
-                        <div class="status-meta">
-                            <span>📡 Última actualización: <b>Hace 3 minutos</b></span> | 
-                            <span>📰 Noticias recopiladas hoy: <b>142 notas</b></span>
+                        <div class="status-meta" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                            <span id="newsLastUpdated">📡 Última actualización: <b>En vivo ahora mismo</b></span>
+                            <button type="button" class="retro-btn btn-green btn-sm" onclick="window.syncLiveNews()" style="padding: 3px 10px; font-size: 10px; font-weight: bold;">
+                                🔄 Sincronizar Noticias Ahora
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -740,15 +742,21 @@
                 </div>
             </div>
 
-            <!-- Top Downloads Ranking -->
-            <div class="retro-card">
-                <div class="card-header">
-                    <h3>🏆 Top 5 Apuntes Más Bajados</h3>
+            <!-- Live Breaking News Sidebar Card: Al Caliente -->
+            <div class="retro-card card-al-caliente" style="border-color: #B91C1C;">
+                <div class="card-header" style="background: linear-gradient(180deg, #DC2626 0%, #991B1B 100%); color: #FFFFFF;">
+                    <h3 style="color: #FFFFFF; display: flex; align-items: center; justify-content: space-between;">
+                        <span>🔥 Al Caliente</span>
+                        <span class="pulse-dot-red" title="Actualizado en tiempo real por el Noticiero en Vivo UVago"></span>
+                    </h3>
                 </div>
-                <div class="card-body">
-                    <ol class="top-ranking-list" id="topNotesRanking">
-                        <!-- Populated by JS -->
-                    </ol>
+                <div class="card-body" style="padding: 10px;">
+                    <div id="alCalienteList" class="al-caliente-feed">
+                        <!-- Populated dynamically via JS with breaking news -->
+                    </div>
+                    <button type="button" class="retro-btn btn-red btn-block btn-sm" onclick="window.switchTab('tab-noticias')" style="margin-top: 10px; font-weight: bold; background: #991B1B; border-color: #7F1D1D;">
+                        📰 Ver Noticiero Completo (→)
+                    </button>
                 </div>
             </div>
 
@@ -1089,6 +1097,6 @@
         </div>
     </div>
 
-    <script src="app.js?v=26"></script>
+    <script src="app.js?v=37"></script>
 </body>
 </html>

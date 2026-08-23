@@ -1602,6 +1602,42 @@ marquee {
     display: none;
 }
 
+.pulse-dot-red {
+    width: 8px;
+    height: 8px;
+    background-color: #EF4444;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    animation: pulseRed 1.5s infinite;
+}
+
+@keyframes pulseRed {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+.btn-red {
+    background: linear-gradient(180deg, #DC2626 0%, #991B1B 100%);
+    color: var(--color-white);
+    border: 1px solid #7F1D1D;
+}
+
+.btn-red:hover {
+    background: linear-gradient(180deg, #EF4444 0%, #B91C1C 100%);
+    color: var(--color-white);
+}
+
 .panel-header-bar {
     background: var(--color-white);
     border: 2px solid var(--color-uv-blue);
@@ -1697,33 +1733,101 @@ marquee {
    RESPONSIVE DESIGN (MOBILE & TABLET)
    ========================================================================== */
 
+@media (max-width: 992px) {
+    .retro-nav {
+        padding: 0 5px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-tabs {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+        width: max-content;
+    }
+
+    .tab-item a {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+}
+
 @media (max-width: 900px) {
     .main-container {
         grid-template-columns: 1fr;
+        padding: 10px 8px;
+        gap: 12px;
     }
-    
-    .sidebar-left, .sidebar-right {
+
+    .sidebar-left {
         order: 2;
     }
-    
+
     .content-area {
         order: 1;
     }
 
+    .sidebar-right {
+        order: 3;
+    }
+
     .header-main {
         flex-direction: column;
+        gap: 10px;
+        padding: 10px;
         text-align: center;
     }
 
     .logo-container {
         flex-direction: column;
+        gap: 8px;
     }
 
     .header-search-box {
         width: 100%;
+        box-sizing: border-box;
     }
 
-    .nav-tabs {
-        justify-content: center;
+    .form-row-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .site-title {
+        font-size: 20px;
+    }
+
+    .site-tagline {
+        font-size: 11px;
+    }
+
+    .welcome-box {
+        padding: 10px;
+    }
+
+    .notes-grid, .tools-grid, .pasillo-grid, .events-grid, .news-feed-grid, .books-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .retro-modal-window {
+        width: 96vw !important;
+        max-height: 92vh !important;
+        margin: 10px auto;
+    }
+
+    .modal-body-content {
+        padding: 10px;
+    }
+
+    .retro-btn {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .filter-toolbar {
+        flex-direction: column;
+        align-items: stretch;
     }
 }

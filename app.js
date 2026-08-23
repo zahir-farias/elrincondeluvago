@@ -10,80 +10,83 @@
     // 1. DATASETS (APUNTES, NOTICIAS, EXÁMENES, HERRAMIENTAS, LIBROS, PROFESORES)
     // ----------------------------------------------------------------------
 
+    // Placeholder shown ONLY while RSS auto-loads on page entry.
+    // These use real homepage URLs. Real article deep-links come from live RSS feeds.
     const initialNewsData = [
-        {
-            id: 'news-1',
-            title: 'La Universidad Veracruzana abre convocatoria para movilidad académica e intercambio internacional en Comunicación',
-            source: 'Universo UV',
-            sourceCategory: 'Veracruz & UV',
-            badgeColor: 'badge-green',
-            date: '22 de Agosto de 2026',
-            time: '17:30 hrs (Hace 15 min)',
-            summary: 'La Dirección General de Relaciones Internacionales de la UV presentó la convocatoria para estancias estudiantiles en comunicación y audiovisual en España, Argentina y Colombia.',
-            apaCitation: 'Universo UV. (2026, 22 de agosto). La Universidad Veracruzana abre convocatoria para movilidad académica internacional. Comunicación UV. https://www.uv.mx/prensa',
-            url: 'https://www.uv.mx/prensa'
-        },
-        {
-            id: 'news-2',
-            title: 'Anuncian modernización de laboratorios de medios y conectividad en la zona Veracruz-Boca del Río',
-            source: 'XEU Noticias',
-            sourceCategory: 'Veracruz & UV',
-            badgeColor: 'badge-green',
-            date: '22 de Agosto de 2026',
-            time: '16:45 hrs (Hace 45 min)',
-            summary: 'Autoridades universitarias confirmaron el fortalecimiento de redes de alta velocidad y renovación de equipo de edición para las facultades del campus costero.',
-            apaCitation: 'XEU Noticias. (2026, 22 de agosto). Anuncian modernización de laboratorios de medios en campus UV. XEU Noticias. https://xeu.mx',
-            url: 'https://xeu.mx'
-        },
-        {
-            id: 'news-3',
-            title: 'Presentan iniciativa de ley para fortalecer garantías y libertad de expresión en el periodismo mexicano',
-            source: 'El Universal',
-            sourceCategory: 'Nacional México',
-            badgeColor: 'badge-blue',
-            date: '22 de Agosto de 2026',
-            time: '15:10 hrs (Hace 2 horas)',
-            summary: 'Organizaciones del gremio periodístico y legisladores presentaron en el Congreso un dictamen para robustecer los mecanismos de protección a comunicadores e investigadores.',
-            apaCitation: 'El Universal. (2026, 22 de agosto). Presentan iniciativa de ley para garantizar libertad de expresión periodística en México. El Universal. https://eluniversal.com.mx',
-            url: 'https://eluniversal.com.mx'
-        },
-        {
-            id: 'news-4',
-            title: 'Congreso Internacional de Ética Periodística y Narrativas Transmedia se celebrará en Veracruz',
-            source: 'La Jornada',
-            sourceCategory: 'Periodismo & Medios',
-            badgeColor: 'badge-orange',
-            date: '22 de Agosto de 2026',
-            time: '14:00 hrs (Hace 3 horas)',
-            summary: 'Académicos e investigadores de Iberoamérica analizarán los retos éticos de las salas de redacción digitales y el uso de inteligencia artificial en el periodismo.',
-            apaCitation: 'La Jornada. (2026, 22 de agosto). Veracruz será sede del Congreso Internacional de Ética Periodística. La Jornada. https://jornada.com.mx',
-            url: 'https://jornada.com.mx'
-        },
-        {
-            id: 'news-5',
-            title: 'Estudio analiza el impacto de las herramientas de IA generativa en la producción audiovisual',
-            source: 'Aristegui Noticias',
-            sourceCategory: 'Periodismo & Medios',
-            badgeColor: 'badge-orange',
-            date: '22 de Agosto de 2026',
-            time: '12:30 hrs (Hace 5 horas)',
-            summary: 'Reporte especializado examina cómo la automatización está transformando las etapas de preproducción, postproducción de audio y síntesis de voz en los medios.',
-            apaCitation: 'Aristegui Noticias. (2026, 22 de agosto). El impacto de las herramientas de IA generativa en la producción audiovisual. Aristegui Noticias. https://aristeguinoticias.com',
-            url: 'https://aristeguinoticias.com'
-        },
-        {
-            id: 'news-6',
-            title: 'Estudiantes de Ciencias de la Comunicación obtienen galardón nacional por documental universitario',
-            source: 'Diario de Xalapa',
-            sourceCategory: 'Veracruz & UV',
-            badgeColor: 'badge-green',
-            date: '22 de Agosto de 2026',
-            time: '10:15 hrs (Hace 7 horas)',
-            summary: 'El proyecto enfocado en la memoria histórica y la cultura viva del estado de Veracruz recibió el primer lugar en la categoría de cortometraje documental universitario.',
-            apaCitation: 'Diario de Xalapa. (2026, 22 de agosto). Alumnos de FACICO ganan premio nacional por documental. Diario de Xalapa. https://diariodexalapa.com.mx',
-            url: 'https://diariodexalapa.com.mx'
-        }
+        { id: 'ph-lat-1', source: 'Latinus', sourceCategory: 'Periodismo & Medios', badgeColor: 'badge-orange',
+          timestamp: Date.now() - 4*60*1000, date: 'Hoy', time: 'Hace 4 min',
+          url: 'https://latinus.us', title: '⏳ Sincronizando noticias en vivo de Latinus…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de Latinus en tiempo real. Las noticias con enlace directo al artículo se cargarán automáticamente.',
+          apaCitation: '' },
+        { id: 'ph-mil-1', source: 'Milenio Diario', sourceCategory: 'Nacional México', badgeColor: 'badge-blue',
+          timestamp: Date.now() - 11*60*1000, date: 'Hoy', time: 'Hace 11 min',
+          url: 'https://www.milenio.com', title: '⏳ Sincronizando noticias en vivo de Milenio…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de Milenio Diario en tiempo real. Las noticias con enlace directo al artículo se cargarán automáticamente.',
+          apaCitation: '' },
+        { id: 'ph-not-1', source: 'Notiver', sourceCategory: 'Veracruz & UV', badgeColor: 'badge-green',
+          timestamp: Date.now() - 18*60*1000, date: 'Hoy', time: 'Hace 18 min',
+          url: 'https://www.notiver.com.mx', title: '⏳ Sincronizando noticias en vivo de Notiver…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de Notiver Veracruz en tiempo real. Las noticias con enlace directo al artículo se cargarán automáticamente.',
+          apaCitation: '' },
+        { id: 'ph-tvm-1', source: 'TVMÁS Veracruz', sourceCategory: 'Veracruz & UV', badgeColor: 'badge-green',
+          timestamp: Date.now() - 25*60*1000, date: 'Hoy', time: 'Hace 25 min',
+          url: 'https://tvmas.mx', title: '⏳ Sincronizando noticias en vivo de TVMÁS Veracruz…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de TVMÁS en tiempo real. Las noticias con enlace directo al artículo se cargarán automáticamente.',
+          apaCitation: '' },
+        { id: 'ph-acp-1', source: 'Al Calor Político', sourceCategory: 'Veracruz & UV', badgeColor: 'badge-green',
+          timestamp: Date.now() - 33*60*1000, date: 'Hoy', time: 'Hace 33 min',
+          url: 'https://www.alcalorpolitico.com', title: '⏳ Sincronizando noticias en vivo de Al Calor Político…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de Al Calor Político Veracruz en tiempo real.',
+          apaCitation: '' },
+        { id: 'ph-xeu-1', source: 'XEU Noticias', sourceCategory: 'Veracruz & UV', badgeColor: 'badge-green',
+          timestamp: Date.now() - 40*60*1000, date: 'Hoy', time: 'Hace 40 min',
+          url: 'https://xeu.mx', title: '⏳ Sincronizando noticias en vivo de XEU Noticias…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de XEU Noticias Veracruz en tiempo real.',
+          apaCitation: '' },
+        { id: 'ph-eld-1', source: 'El Dictamen', sourceCategory: 'Veracruz & UV', badgeColor: 'badge-green',
+          timestamp: Date.now() - 50*60*1000, date: 'Hoy', time: 'Hace 50 min',
+          url: 'https://www.eldictamen.mx', title: '⏳ Sincronizando noticias en vivo de El Dictamen…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de El Dictamen Veracruz en tiempo real.',
+          apaCitation: '' },
+        { id: 'ph-plu-1', source: 'Plumas Libres', sourceCategory: 'Veracruz & UV', badgeColor: 'badge-green',
+          timestamp: Date.now() - 58*60*1000, date: 'Hoy', time: 'Hace 58 min',
+          url: 'https://plumaslibres.com.mx', title: '⏳ Sincronizando noticias en vivo de Plumas Libres…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de Plumas Libres en tiempo real.',
+          apaCitation: '' },
+        { id: 'ph-elu-1', source: 'El Universal', sourceCategory: 'Nacional México', badgeColor: 'badge-blue',
+          timestamp: Date.now() - 65*60*1000, date: 'Hoy', time: 'Hace 1 hr',
+          url: 'https://www.eluniversal.com.mx', title: '⏳ Sincronizando noticias en vivo de El Universal…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de El Universal en tiempo real.',
+          apaCitation: '' },
+        { id: 'ph-ari-1', source: 'Aristegui Noticias', sourceCategory: 'Periodismo & Medios', badgeColor: 'badge-orange',
+          timestamp: Date.now() - 75*60*1000, date: 'Hoy', time: 'Hace 1 hr',
+          url: 'https://aristeguinoticias.com', title: '⏳ Sincronizando noticias en vivo de Aristegui Noticias…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de Aristegui Noticias en tiempo real.',
+          apaCitation: '' },
+        { id: 'ph-ljr-1', source: 'La Jornada', sourceCategory: 'Nacional México', badgeColor: 'badge-blue',
+          timestamp: Date.now() - 85*60*1000, date: 'Hoy', time: 'Hace 1 hr',
+          url: 'https://www.jornada.com.mx', title: '⏳ Sincronizando noticias en vivo de La Jornada…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de La Jornada en tiempo real.',
+          apaCitation: '' },
+        { id: 'ph-pro-1', source: 'Proceso', sourceCategory: 'Periodismo & Medios', badgeColor: 'badge-orange',
+          timestamp: Date.now() - 95*60*1000, date: 'Hoy', time: 'Hace 1 hr',
+          url: 'https://www.proceso.com.mx', title: '⏳ Sincronizando noticias en vivo de Proceso…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de Revista Proceso en tiempo real.',
+          apaCitation: '' },
+        { id: 'ph-ani-1', source: 'Animal Político', sourceCategory: 'Periodismo & Medios', badgeColor: 'badge-orange',
+          timestamp: Date.now() - 105*60*1000, date: 'Hoy', time: 'Hace 1 hr',
+          url: 'https://www.animalpolitico.com', title: '⏳ Sincronizando noticias en vivo de Animal Político…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de Animal Político en tiempo real.',
+          apaCitation: '' },
+        { id: 'ph-dxa-1', source: 'Diario de Xalapa', sourceCategory: 'Veracruz & UV', badgeColor: 'badge-green',
+          timestamp: Date.now() - 115*60*1000, date: 'Hoy', time: 'Hace 1 hr',
+          url: 'https://www.diariodexalapa.com.mx', title: '⏳ Sincronizando noticias en vivo de Diario de Xalapa…',
+          summary: 'El algoritmo RSS está obteniendo las notas más recientes de Diario de Xalapa en tiempo real.',
+          apaCitation: '' }
     ];
+
+
+
 
     const initialBooks = [
         {
@@ -743,21 +746,46 @@ Fotógrafo: Kevin Aguilar | 7º Semestre (FACICO UV)
     // 4. RENDERING FUNCTIONS
     // ----------------------------------------------------------------------
 
+    // ── Quality Gate ────────────────────────────────────────────────────────
+    // A note is VALID only if it has a real APA citation and a deep article URL.
+    // Placeholders (⏳) and homepage-only links are automatically excluded.
+    function isValidNote(note) {
+        // Must have a non-empty APA citation
+        if (!note.apaCitation || note.apaCitation.trim() === '') return false;
+        // Must not be a loading placeholder
+        if (note.title && note.title.startsWith('⏳')) return false;
+        // URL must point to an actual article (path depth >= 1)
+        try {
+            const path = new URL(note.url).pathname.replace(/\/$/, '');
+            const segments = path.split('/').filter(s => s.length > 0);
+            return segments.length >= 1;
+        } catch { return false; }
+    }
+
     // Render Noticias Grid (Redirección directa + Fuente Bibliográfica APA + Noticiero, Fecha, Hora)
     function renderNewsGrid(list = newsData) {
         const grid = document.getElementById('newsFeedGrid');
         if (!grid) return;
 
-        if (list.length === 0) {
-            grid.innerHTML = `
-                <div class="welcome-box" style="grid-column: 1 / -1;">
-                    <p>😔 No se encontraron noticias con los filtros seleccionados.</p>
-                </div>
-            `;
+        // Apply quality gate: only show valid notes with real APA + deep article URL
+        const validList = list.filter(isValidNote);
+
+        if (validList.length === 0) {
+            // If we still have placeholders it means RSS hasn't loaded yet
+            const hasPlaceholders = list.some(n => n.title && n.title.startsWith('⏳'));
+            grid.innerHTML = hasPlaceholders
+                ? `<div class="welcome-box" style="grid-column: 1 / -1; text-align:center;">
+                       <p>🔄 <strong>Sincronizando noticias en vivo…</strong><br>
+                       El algoritmo RSS está obteniendo artículos reales de 14 portales.<br>
+                       <small>Esto toma solo unos segundos. La página se actualizará automáticamente.</small></p>
+                   </div>`
+                : `<div class="welcome-box" style="grid-column: 1 / -1;">
+                       <p>😔 No se encontraron noticias con los filtros seleccionados.</p>
+                   </div>`;
             return;
         }
 
-        grid.innerHTML = list.map(news => `
+        grid.innerHTML = validList.map(news => `
             <div class="tool-card retro-card news-card-interactive" onclick="window.open('${news.url}', '_blank');" title="Haz clic para leer la nota original en ${news.source}">
                 <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                     <h3>📰 ${news.source}</h3>
@@ -783,7 +811,117 @@ Fotógrafo: Kevin Aguilar | 7º Semestre (FACICO UV)
                 </div>
             </div>
         `).join('');
+
+        window.renderAlCaliente();
     }
+
+    // Priority Portal Weights (Targeted media prioritized quietly)
+    function getSourcePriorityWeight(sourceName) {
+        const lower = (sourceName || '').toLowerCase();
+        if (lower.includes('latinus')) return 100;
+        if (lower.includes('milenio')) return 90;
+        if (lower.includes('notiver')) return 85;
+        if (lower.includes('tvmás') || lower.includes('tvmas')) return 80;
+        if (lower.includes('al calor')) return 75;
+        return 10;
+    }
+
+    // Round-Robin Source Interleaver to guarantee source variety as user scrolls
+    function interleaveNewsBySource(items) {
+        const groups = {};
+        items.forEach(item => {
+            const src = item.source || 'General';
+            if (!groups[src]) groups[src] = [];
+            groups[src].push(item);
+        });
+
+        // Order sources by priority weight
+        const sources = Object.keys(groups).sort((a, b) => {
+            const weightA = getSourcePriorityWeight(a);
+            const weightB = getSourcePriorityWeight(b);
+            return weightB - weightA;
+        });
+
+        const result = [];
+        let added = true;
+
+        while (added) {
+            added = false;
+            for (const src of sources) {
+                if (groups[src].length > 0) {
+                    result.push(groups[src].shift());
+                    added = true;
+                }
+            }
+        }
+
+        return result;
+    }
+
+    // Dynamic relative timestamp helper
+    function getRelativeTimeString(itemTimestamp) {
+        if (!itemTimestamp) return 'Hace un momento';
+        const diffMs = Math.max(1000 * 60 * 2, Date.now() - itemTimestamp);
+        const diffMins = Math.floor(diffMs / (1000 * 60));
+
+        if (diffMins < 60) {
+            return `Hace ${diffMins} min`;
+        }
+        const diffHours = Math.floor(diffMins / 60);
+        if (diffHours < 24) {
+            return `Hace ${diffHours} hr${diffHours > 1 ? 's' : ''}`;
+        }
+        return 'Hoy';
+    }
+
+    // Render Live Breaking News Sidebar Card ("🔥 Al Caliente")
+    window.renderAlCaliente = function() {
+        const container = document.getElementById('alCalienteList');
+        if (!container) return;
+
+        // Apply quality gate: only valid notes with real APA + deep article URL
+        const validNews = interleaveNewsBySource(newsData.filter(isValidNote));
+
+        if (validNews.length === 0) {
+            container.innerHTML = '<p style="font-size:10px; color:#999; text-align:center;">🔄 Sincronizando noticias…</p>';
+            return;
+        }
+
+        // Pick top 3 latest notes from 3 DIFFERENT sources
+        const selected = [];
+        const seenSources = new Set();
+
+        for (const item of validNews) {
+            if (selected.length >= 3) break;
+            if (!seenSources.has(item.source)) {
+                seenSources.add(item.source);
+                selected.push(item);
+            }
+        }
+
+        // Fill up to 3 if fewer unique sources
+        if (selected.length < 3) {
+            for (const item of validNews) {
+                if (selected.length >= 3) break;
+                if (!selected.some(s => s.id === item.id)) selected.push(item);
+            }
+        }
+
+        container.innerHTML = selected.map(n => {
+            const relTime = n.timestamp ? getRelativeTimeString(n.timestamp) : (n.time || 'Hace un momento');
+            return `
+            <div class="al-caliente-item" style="border-bottom: 1px dashed #FECACA; padding-bottom: 6px; margin-bottom: 6px; cursor: pointer;" onclick="window.open('${n.url}', '_blank');" title="Haz clic para abrir nota en ${n.source}">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                    <span class="badge-mini ${n.badgeColor}" style="font-size: 8.5px; padding: 1px 4px;">${n.source}</span>
+                    <span style="font-size: 8.5px; color: #DC2626; font-weight: bold;">⚡ ${relTime}</span>
+                </div>
+                <a href="${n.url}" target="_blank" onclick="event.stopPropagation();" style="font-size: 10.5px; font-weight: bold; color: #991B1B; text-decoration: none; line-height: 1.2; display: block;">
+                    ${n.title}
+                </a>
+            </div>
+            `;
+        }).join('');
+    };
 
     // Filter Noticias
     window.filterNews = function() {
@@ -797,6 +935,185 @@ Fotógrafo: Kevin Aguilar | 7º Semestre (FACICO UV)
         });
 
         renderNewsGrid(filtered);
+    };
+
+    // Synchronize Real-time Live News Feeds
+    window.syncLiveNews = async function(isAutoLoad = false) {
+        const statusText = document.getElementById('newsSyncStatusText');
+        const lastUpdated = document.getElementById('newsLastUpdated');
+
+        if (statusText) {
+            statusText.innerHTML = '<span style="color: var(--color-uv-blue);">🔄 Sincronizando automáticamente 14 Portales de Periodismo...</span>';
+        }
+
+        // ── Helper: determine if a URL is a real deep article link ─────────────
+        // A URL is "deep" if its path has meaningful segments beyond the root /.
+        function resolveArticleUrl(link, guid, homepageUrl) {
+            function pathDepth(url) {
+                if (!url || typeof url !== 'string' || url.trim().length < 8) return 0;
+                try {
+                    const path = new URL(url.trim()).pathname.replace(/\/$/, '');
+                    // Count non-empty path segments — articles usually have 2+
+                    return path.split('/').filter(s => s.length > 0).length;
+                } catch { return 0; }
+            }
+
+            // Prefer item.link if it's deep; else try item.guid; else homepage
+            const linkDepth = pathDepth(link);
+            const guidDepth = pathDepth(typeof guid === 'string' ? guid : '');
+
+            if (linkDepth >= 1) return link.trim();
+            if (guidDepth >= 1) return (typeof guid === 'string' ? guid.trim() : homepageUrl);
+            return homepageUrl;
+        }
+
+        // ── RSS Endpoints ──────────────────────────────────────────────────────
+        // For WordPress portals that put the homepage in <link>, we use the
+        // ?feed=rss2 query format which reliably gives per-article <guid> links.
+        // For portals with known broken feeds, we use alternative feed paths.
+        const BASE = 'https://api.rss2json.com/v1/api.json?rss_url=';
+        const enc  = encodeURIComponent;
+
+        const rssEndpoints = [
+            // ── Priority portals ────────────────────────────────────────────────
+            { source: 'Latinus',           category: 'Periodismo & Medios', badgeColor: 'badge-orange', homepage: 'https://latinus.us',
+              url: BASE + enc('https://latinus.us/feed/'),               altUrl: BASE + enc('https://latinus.us/categoria/ultimas-noticias/feed/') },
+            { source: 'Milenio Diario',    category: 'Nacional México',      badgeColor: 'badge-blue',   homepage: 'https://www.milenio.com',
+              url: BASE + enc('https://www.milenio.com/rss'),             altUrl: BASE + enc('https://www.milenio.com/rss/ultimas-noticias') },
+            { source: 'Notiver',           category: 'Veracruz & UV',        badgeColor: 'badge-green',  homepage: 'https://www.notiver.com.mx',
+              url: BASE + enc('https://www.notiver.com.mx/feed/'),        altUrl: BASE + enc('https://www.notiver.com.mx/?feed=rss2') },
+            { source: 'TVMÁS Veracruz',    category: 'Veracruz & UV',        badgeColor: 'badge-green',  homepage: 'https://tvmas.mx',
+              url: BASE + enc('https://tvmas.mx/feed/'),                  altUrl: BASE + enc('https://tvmas.mx/?feed=rss2') },
+            { source: 'El Dictamen',       category: 'Veracruz & UV',        badgeColor: 'badge-green',  homepage: 'https://www.eldictamen.mx',
+              url: BASE + enc('https://www.eldictamen.mx/feed/'),         altUrl: BASE + enc('https://www.eldictamen.mx/?feed=rss2') },
+            { source: 'XEU Noticias',      category: 'Veracruz & UV',        badgeColor: 'badge-green',  homepage: 'https://xeu.mx',
+              url: BASE + enc('https://xeu.mx/feed/'),                    altUrl: BASE + enc('https://xeu.mx/?feed=rss2') },
+            { source: 'Proceso',           category: 'Periodismo & Medios', badgeColor: 'badge-orange',  homepage: 'https://www.proceso.com.mx',
+              url: BASE + enc('https://www.proceso.com.mx/feed/'),        altUrl: BASE + enc('https://www.proceso.com.mx/?feed=rss') },
+            // ── Portals with known-working deep-link RSS ────────────────────────
+            { source: 'Al Calor Político', category: 'Veracruz & UV',        badgeColor: 'badge-green',  homepage: 'https://www.alcalorpolitico.com',
+              url: BASE + enc('https://www.alcalorpolitico.com/rss/noticias.xml') },
+            { source: 'Plumas Libres',     category: 'Veracruz & UV',        badgeColor: 'badge-green',  homepage: 'https://plumaslibres.com.mx',
+              url: BASE + enc('https://plumaslibres.com.mx/feed/') },
+            { source: 'El Universal',      category: 'Nacional México',      badgeColor: 'badge-blue',   homepage: 'https://www.eluniversal.com.mx',
+              url: BASE + enc('https://www.eluniversal.com.mx/arc/outboundfeeds/rss/?outputType=xml') },
+            { source: 'Aristegui Noticias',category: 'Periodismo & Medios', badgeColor: 'badge-orange',  homepage: 'https://aristeguinoticias.com',
+              url: BASE + enc('https://aristeguinoticias.com/feed/') },
+            { source: 'La Jornada',        category: 'Nacional México',      badgeColor: 'badge-blue',   homepage: 'https://www.jornada.com.mx',
+              url: BASE + enc('https://www.jornada.com.mx/rss/edicion.xml') },
+            { source: 'Animal Político',   category: 'Periodismo & Medios', badgeColor: 'badge-orange',  homepage: 'https://www.animalpolitico.com',
+              url: BASE + enc('https://www.animalpolitico.com/feed/') },
+            { source: 'Diario de Xalapa',  category: 'Veracruz & UV',        badgeColor: 'badge-green',  homepage: 'https://www.diariodexalapa.com.mx',
+              url: BASE + enc('https://www.diariodexalapa.com.mx/rss/') }
+        ];
+
+        let fetchedNews = [];
+
+        const now = Date.now();
+
+        for (const ep of rssEndpoints) {
+            let data = null;
+
+            // Try primary feed URL first
+            try {
+                const res = await fetch(ep.url);
+                if (res.ok) {
+                    const parsed = await res.json();
+                    if (parsed && parsed.items && parsed.items.length > 0) {
+                        data = parsed;
+                    }
+                }
+            } catch (err) {
+                console.warn(`Primary feed failed for ${ep.source}:`, err.message);
+            }
+
+            // If primary failed and altUrl exists, try alternate feed
+            if (!data && ep.altUrl) {
+                try {
+                    const res2 = await fetch(ep.altUrl);
+                    if (res2.ok) {
+                        const parsed2 = await res2.json();
+                        if (parsed2 && parsed2.items && parsed2.items.length > 0) {
+                            data = parsed2;
+                            console.info(`Used altUrl for ${ep.source}`);
+                        }
+                    }
+                } catch (err2) {
+                    console.warn(`Alt feed also failed for ${ep.source}:`, err2.message);
+                }
+            }
+
+            if (data && data.items && data.items.length > 0) {
+                data.items.slice(0, 4).forEach((item, idx) => {
+                    const cleanSummary = item.description
+                        ? item.description.replace(/<[^>]*>?/gm, '').substring(0, 190) + '...'
+                        : 'Nota periodística en desarrollo...';
+                    const itemTimeMs = item.pubDate
+                        ? new Date(item.pubDate).getTime()
+                        : (now - (idx + 1) * 5 * 60 * 1000);
+                    const relTimeString = getRelativeTimeString(itemTimeMs);
+
+                    // 3-level link resolution: item.link → item.guid → portal homepage
+                    const articleUrl = resolveArticleUrl(item.link, item.guid, ep.homepage);
+                    console.info(`[${ep.source}] "${item.title}" → ${articleUrl}`);
+
+                    // ── Quality Gate at ingest time ──
+                    // Only push notes that resolve to a real deep article URL.
+                    // If articleUrl is just the portal homepage, skip this item entirely.
+                    let isDeepArticle = false;
+                    try {
+                        const p = new URL(articleUrl).pathname.replace(/\/$/, '');
+                        isDeepArticle = p.split('/').filter(s => s.length > 0).length >= 1;
+                    } catch { isDeepArticle = false; }
+
+                    if (!isDeepArticle) {
+                        console.warn(`[${ep.source}] SKIPPED (homepage URL): ${articleUrl}`);
+                        return; // don't add defective note
+                    }
+
+                    const apaCitation = `${ep.source}. (${new Date().getFullYear()}). ${item.title}. Recuperado de ${articleUrl}`;
+
+                    fetchedNews.push({
+                        id: `live-${ep.source.toLowerCase().replace(/\s+/g, '-')}-${idx}-${Date.now()}`,
+                        title: item.title,
+                        source: ep.source,
+                        sourceCategory: ep.category,
+                        badgeColor: ep.badgeColor,
+                        timestamp: itemTimeMs,
+                        date: 'Hoy',
+                        time: relTimeString,
+                        summary: cleanSummary,
+                        apaCitation: apaCitation,
+                        url: articleUrl
+                    });
+                });
+            } else {
+                console.warn(`No items fetched for ${ep.source}`);
+
+            }
+        }
+
+        if (fetchedNews.length > 0) {
+            // Deduplicate by title — exclude placeholder entries, keep only real RSS notes
+            const uniqueMap = new Map();
+            fetchedNews.forEach(n => {
+                if (!uniqueMap.has(n.title)) uniqueMap.set(n.title, n);
+            });
+            newsData = interleaveNewsBySource(Array.from(uniqueMap.values()));
+
+            const validCount = newsData.filter(isValidNote).length;
+            if (statusText) statusText.innerHTML = `<span style="color: var(--color-uv-green);">✅ Auto-Sync Activo (${validCount} Notas verificadas de 14 Portales)</span>`;
+            if (lastUpdated) lastUpdated.innerHTML = `📡 Última actualización: <b>${new Date().toLocaleTimeString()} (Automática)</b>`;
+        } else {
+            // RSS failed entirely — keep showing placeholders, retry in 30 seconds
+            newsData = interleaveNewsBySource([...initialNewsData]);
+            if (statusText) statusText.innerHTML = `<span style="color: #f59e0b;">⚠️ Conectando con portales… reintentando en 30 s</span>`;
+            if (lastUpdated) lastUpdated.innerHTML = `📡 Última actualización: <b>Pendiente</b>`;
+            // Auto-retry once after 30 seconds
+            setTimeout(() => window.syncLiveNews(true), 30000);
+        }
+
+        renderNewsGrid();
     };
 
     // Render Books Grid (Con Autor, Fecha/Año, Título, Clasificación, Tamaño y Descargas)
@@ -2078,6 +2395,9 @@ Fotógrafo: Kevin Aguilar | 7º Semestre (FACICO UV)
         renderPasilloGrid();
         renderEventsGrid();
         renderTopRanking();
+
+        // Auto-Sync Live Journalism News on page load
+        window.syncLiveNews(true);
 
         // Apply Windows XP Retro Icons across the entire DOM
         setTimeout(function() {
