@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rincón del UVago - FACICO Universidad Veracruzana</title>
+    <meta name="description" content="El portal retro de supervivencia, noticias diarias, apuntes, exámenes, libros, plantillas y herramientas de IA para estudiantes de Ciencias de la Comunicación en FACICO - Universidad Veracruzana (UV).">
+    <link rel="stylesheet" href="style.css?v=26">
+    <!-- Google Fonts for Retro & Modern feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&family=Verdana&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Retro Banner & Marquee -->
+    <header class="retro-header">
+        <div class="top-marquee-container">
+            <marquee behavior="scroll" direction="left" scrollamount="4">
+                ¡Bienvenido a El Rincón del UVago! El portal de noticias diarias, apuntes, libros, plantillas y herramientas para estudiantes de Ciencias de la Comunicación - Universidad Veracruzana. | 📰 Sección Noticias: Monitoreo automatizado de portales de Veracruz y México. | 🎥 ¿Tienes apuntes o plantillas? ¡Súbelos y ayuda a la comunidad!
+            </marquee>
+        </div>
+
+        <div class="header-main">
+            <div class="logo-container">
+                <img src="uvago_mascot.png?v=2" alt="Mascota El Rincón del UVago" class="mascot-img">
+                <div class="title-box">
+                    <h1 class="site-title">El Rincón del <span class="uv-highlight">UV</span>ago</h1>
+                    <p class="site-tagline">El portal de apuntes, resúmenes y supervivencia de FACICO - Universidad Veracruzana</p>
+                </div>
+            </div>
+
+            <!-- Quick Search Bar -->
+            <div class="header-search-box">
+                <form id="quickSearchForm" onsubmit="event.preventDefault(); window.searchFromHeader();">
+                    <div class="search-title"><span class="xp-icon xp-search"></span> BUSCADOR RÁPIDO DE APUNTES Y NOTICIAS</div>
+                    <div class="search-inputs">
+                        <input type="text" id="headerSearchQuery" placeholder="Ej: Lengua I, Rendón, Periodismo, Noticias..." required>
+                        <button type="submit" class="retro-btn btn-search">¡BUSCAR YA!</button>
+                    </div>
+                    <div class="search-filters">
+                        <label><input type="radio" name="searchType" value="all" checked> Todo</label>
+                        <label><input type="radio" name="searchType" value="apunte"> Apuntes</label>
+                        <label><input type="radio" name="searchType" value="noticia"> Noticias</label>
+                        <label><input type="radio" name="searchType" value="profesor"> Profesores</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Main Navigation Bar (Retro Tabs) -->
+        <nav class="retro-nav">
+            <ul class="nav-tabs" role="tablist">
+                <li class="tab-item active" data-tab="tab-inicio">
+                    <a href="#inicio"><span class="xp-icon xp-home"></span> Inicio</a>
+                </li>
+                <li class="tab-item" data-tab="tab-noticias">
+                    <a href="#noticias"><span class="xp-icon xp-news"></span> Noticias</a>
+                </li>
+                <li class="tab-item" data-tab="tab-herramientas">
+                    <a href="#herramientas"><span class="xp-icon xp-tools"></span> Herramientas</a>
+                </li>
+                <li class="tab-item" data-tab="tab-apuntes">
+                    <a href="#apuntes"><span class="xp-icon xp-books"></span> Apuntes y Trabajos</a>
+                </li>
+                <li class="tab-item" data-tab="tab-examenes">
+                    <a href="#examenes"><span class="xp-icon xp-exam"></span> Guías de Exámenes</a>
+                </li>
+                <li class="tab-item" data-tab="tab-plantillas">
+                    <a href="#plantillas"><span class="xp-icon xp-template"></span> Plantillas</a>
+                </li>
+                <li class="tab-item" data-tab="tab-libros">
+                    <a href="#libros"><span class="xp-icon xp-book-red"></span> Libros</a>
+                </li>
+                <li class="tab-item" data-tab="tab-eventos">
+                    <a href="#eventos"><span class="xp-icon xp-calendar"></span> Eventos</a>
+                </li>
+                <li class="tab-item" data-tab="tab-pasillo">
+                    <a href="#pasillo"><span class="xp-icon xp-pasillo"></span> Pasillo</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main 3-Column Layout Container -->
+    <div class="main-container">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar sidebar-left">
+            <!-- Categories Card -->
+            <div class="retro-card">
+                <div class="card-header">
+                    <h3><span class="xp-icon xp-folder"></span> Materias FACICO</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="category-list" id="categoryFilterList">
+                        <li><a href="#" data-cat="todas" class="cat-link active"><span class="xp-icon xp-star"></span> Todas las Materias</a></li>
+                        <li><a href="#" data-cat="Lengua I" class="cat-link"><span class="xp-icon xp-books"></span> Lengua I</a></li>
+                        <li><a href="#" data-cat="Estudios Culturales Latinoamericanos" class="cat-link"><span class="xp-icon xp-template"></span> Estudios Culturales Latinoamericanos</a></li>
+                        <li><a href="#" data-cat="Génesis y Evolución de la Comunicación" class="cat-link"><span class="xp-icon xp-book-red"></span> Génesis y Evolución de la Comunicación</a></li>
+                        <li><a href="#" data-cat="Textos Periodísticos Informativos" class="cat-link"><span class="xp-icon xp-news"></span> Textos Periodísticos Informativos</a></li>
+                        <li><a href="#" data-cat="Filosofía de la Comunicación" class="cat-link"><span class="xp-icon xp-exam"></span> Filosofía de la Comunicación</a></li>
+                        <li><a href="#" data-cat="Investigación en el Campo de la Comunicación" class="cat-link"><span class="xp-icon xp-search"></span> Investigación en la Comunicación</a></li>
+                        <li><a href="#" data-cat="Fotografía Básica" class="cat-link"><span class="xp-icon xp-tools"></span> Fotografía Básica</a></li>
+                        <li><a href="#" data-cat="Socioeconomía de la Comunicación" class="cat-link"><span class="xp-icon xp-teacher"></span> Socioeconomía de la Comunicación</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Semester Filter Card -->
+            <div class="retro-card">
+                <div class="card-header">
+                    <h3><span class="xp-icon xp-teacher"></span> Filtrar por Semestre</h3>
+                </div>
+                <div class="card-body">
+                    <div class="semester-grid" id="semesterFilterGrid">
+                        <button class="sem-btn active" data-sem="todos">Todos</button>
+                        <button class="sem-btn" data-sem="1">1º Sem</button>
+                        <button class="sem-btn" data-sem="2">2º Sem</button>
+                        <button class="sem-btn" data-sem="3">3º Sem</button>
+                        <button class="sem-btn" data-sem="4">4º Sem</button>
+                        <button class="sem-btn" data-sem="5">5º Sem</button>
+                        <button class="sem-btn" data-sem="6">6º Sem</button>
+                        <button class="sem-btn" data-sem="7">7º Sem</button>
+                        <button class="sem-btn" data-sem="8">8º Sem</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Survey Card -->
+            <div class="retro-card card-poll">
+                <div class="card-header">
+                    <h3><span class="xp-icon xp-exam"></span> Encuesta Semanal UVaga</h3>
+                </div>
+                <div class="card-body">
+                    <p class="poll-question">¿Cuál es tu lugar predilecto para 'estudiar' o aguantar horas libres en FACICO?</p>
+                    <form id="pollForm">
+                        <label class="poll-option"><input type="radio" name="poll" value="pastitos" checked> Los pastitos de la facultad</label>
+                        <label class="poll-option"><input type="radio" name="poll" value="cafeteria"> La cafetería comiendo empanadas</label>
+                        <label class="poll-option"><input type="radio" name="poll" value="biblioteca"> La biblioteca (dormir con aire acondicionado)</label>
+                        <label class="poll-option"><input type="radio" name="poll" value="estudio"> El laboratorio de audio/TV</label>
+                        <button type="submit" class="retro-btn btn-poll">¡VOTAR YA!</button>
+                    </form>
+                    <div id="pollResults" class="poll-results hidden">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eventos que te llaman Card -->
+            <div class="retro-card card-upcoming-events">
+                <div class="card-header" style="background: linear-gradient(180deg, var(--color-uv-blue-dark) 0%, #001F4D 100%); color: #FFFFFF;">
+                    <h3><span class="xp-icon xp-calendar"></span> 📅 Eventos que te llaman</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="bullet-notice-list">
+                        <li><strong>🎬 Muestra de Cortos FACICO 2026:</strong> Mañana 16:00 hrs — Auditorio Principal.</li>
+                        <li><strong>🎙️ Conferencia Periodismo Digital:</strong> Viernes 11:00 hrs — Sala Audiovisual A-CCEB.</li>
+                        <li><strong>📸 Taller de Iluminación en Estudio:</strong> Sábado 10:00 hrs — Foro de TV FACICO.</li>
+                        <li><strong>🍿 Cine & Palomitas UVago:</strong> Próximo Martes 17:30 hrs — En los Pastitos.</li>
+                    </ul>
+                    <button class="retro-btn btn-sm btn-block btn-blue" style="margin-top: 8px; font-size: 10px;" onclick="window.switchTab('tab-eventos')">
+                        📅 VER CALENDARIO MENSUAL (→)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Avisos de la Facu Card -->
+            <div class="retro-card card-facu-notices">
+                <div class="card-header">
+                    <h3>📢 Avisos de la Facu</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="bullet-notice-list">
+                        <li><strong>Inscripciones ILUMINA:</strong> Revisa tu horario prioritario asignado por promedio en la plataforma UV.</li>
+                        <li><strong>Préstamo de Cámaras & Equipo:</strong> Aparta cámaras DSLR, luces y micrófonos en el estudio de TV con credencial vigente.</li>
+                        <li><strong>Calendario de Exámenes:</strong> Ya están publicadas las fechas oficiales de exámenes parciales en la secretaría académica de A-CCEB.</li>
+                        <li><strong>Módulo de Resello:</strong> Acude a servicios escolares a resellar tu credencial estudiantil UV.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="content-area">
+
+            <!-- TAB 1: INICIO -->
+            <section id="tab-inicio" class="tab-panel active">
+                <div class="welcome-box">
+                    <h2>¡Bienvenido al Rincón del UVago! 🐶🎓</h2>
+                    <p>El portal definitivo creado por y para estudiantes de <strong>Ciencias de la Comunicación de la FACICO (Universidad Veracruzana)</strong>. Aquí encontrarás las noticias diarias de México y Veracruz, resúmenes que te salvan la noche antes del examen, escaletas, guías, catálogo de libros digitales, herramientas de IA y el verdadero ranking de profesores.</p>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="retro-stats-bar">
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-apuntes">1,482</span>
+                        <span class="stat-label">Apuntes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-examenes">389</span>
+                        <span class="stat-label">Exámenes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-profes">42</span>
+                        <span class="stat-label">Profesores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-uvagos">86</span>
+                        <span class="stat-label">UVagos Online</span>
+                    </div>
+                </div>
+
+                <!-- Featured Note Section -->
+                <div class="retro-card featured-card">
+                    <div class="card-header badge-header">
+                        <h3>⭐ EL APUNTE SALVADOR DE LA SEMANA</h3>
+                        <span class="badge-star">¡MÁS DESCARGADO!</span>
+                    </div>
+                    <div class="card-body featured-body">
+                        <div class="featured-info">
+                            <span class="materia-tag">Semiótica y Análisis</span>
+                            <span class="sem-tag">3º Semestre</span>
+                            <h4>Resumen Completo: Roland Barthes & Ferdinand de Saussure (Semiótica de la Imagen)</h4>
+                            <p>Explicación paso a paso de Denotación, Connotación, Significante y Significado aplicada a anuncios publicitarios. ¡Ideal para pasar el examen parcial de FACICO sin rodeos!</p>
+                            <div class="meta-row">
+                                <span>Por: <i>UVago_Comunicólogo99</i></span> | 
+                                <span>Valoración: ⭐⭐⭐⭐⭐ (4.9/5)</span> | 
+                                <span>Descargas: 1,842</span>
+                            </div>
+                        </div>
+                        <div class="featured-actions">
+                            <button class="retro-btn btn-gold" onclick="window.openNoteModal('note-1')">📖 Leer Apunte Completo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Content Grid -->
+                <div class="section-title-bar">
+                    <h3>📚 Apuntes Recientes de Comunicación FACICO</h3>
+                    <button class="retro-btn btn-sm" onclick="window.switchTab('tab-apuntes')">Ver Todos (→)</button>
+                </div>
+                <div class="notes-grid" id="homeNotesGrid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+
+                <!-- Tips Box -->
+                <div class="retro-card notice-card">
+                    <div class="card-header">
+                        <h3>💡 Mandamientos del UVago de Comunicación</h3>
+                    </div>
+                    <div class="card-body">
+                        <ol class="tips-list">
+                            <li><strong>1. Nunca dejes el cortometraje para la noche previa:</strong> Renderizar en Premiere o DaVinci toma 4 veces más tiempo del que crees.</li>
+                            <li><strong>2. Lleva doble memoria USB o micro SD:</strong> Los laboratorios de FACICO a veces se ponen celosos con las tarjetas dañadas.</li>
+                            <li><strong>3. Revisa la firma del profesor:</strong> Asegúrate de verificar los criterios de evaluación desde la semana 1.</li>
+                            <li><strong>4. Comparte tus apuntes y libros:</strong> El UVago no es egoísta. Lo que subes hoy salva a un compañero mañana.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: NOTICIAS (AUTOMATIZADAS RECOPILADORAS) -->
+            <section id="tab-noticias" class="tab-panel">
+                <div class="panel-header-bar">
+                    <h2>📰 Noticiero Automatizado UVago - Feed Nacional & Veracruz</h2>
+                    <p>Boceto de monitoreo y agregador en tiempo real que recopila las noticias más relevantes del día en México, Estado de Veracruz y la Universidad Veracruzana.</p>
+                </div>
+
+                <!-- Algorithm Status Bar -->
+                <div class="retro-card news-status-card">
+                    <div class="card-body news-status-body">
+                        <div class="status-indicator">
+                            <span class="pulse-dot"></span>
+                            <span><b>Algoritmo RSS Sync UVago:</b> <span style="color: var(--color-uv-green);">Sincronizando 14 Portales en Vivo</span></span>
+                        </div>
+                        <div class="status-meta">
+                            <span>📡 Última actualización: <b>Hace 3 minutos</b></span> | 
+                            <span>📰 Noticias recopiladas hoy: <b>142 notas</b></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Filters -->
+                <div class="filter-toolbar">
+                    <div class="filter-group">
+                        <label for="newsSourceFilter">🌐 Cobertura:</label>
+                        <select id="newsSourceFilter" onchange="window.filterNews()">
+                            <option value="todas">Todas las noticias</option>
+                            <option value="Veracruz & UV">🌊 Veracruz y Universidad Veracruzana</option>
+                            <option value="Nacional México">🇲🇽 Nacionales México</option>
+                            <option value="Periodismo & Medios">🎥 Periodismo y Medios</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="newsSearch">🔎 Palabras clave:</label>
+                        <input type="text" id="newsSearch" placeholder="UV, Xalapa, Veracruz, México..." oninput="window.filterNews()">
+                    </div>
+                </div>
+
+                <!-- News Grid Feed -->
+                <div class="news-feed-grid" id="newsFeedGrid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </section>
+
+            <!-- TAB 3: HERRAMIENTAS (PROGRAMAS E IAs) -->
+            <section id="tab-herramientas" class="tab-panel">
+                <div class="panel-header-bar">
+                    <h2>🛠️ Herramientas de Software & Inteligencias Artificiales de Apoyo</h2>
+                    <p>Catálogo especializado de programas esenciales para comunicólogos y herramientas de IA seleccionadas para tus proyectos académicos y audiovisuales.</p>
+                </div>
+
+                <!-- Sub-section 1: IAs de Apoyo -->
+                <div class="section-title-bar">
+                    <h3>🤖 Inteligencias Artificiales para Estudiantes de Comunicación</h3>
+                </div>
+                <div class="tools-grid" id="aiToolsGrid">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- Sub-section 2: Programas y Software -->
+                <div class="section-title-bar" style="margin-top: 25px;">
+                    <h3>💻 Software y Programas Fundamentales en FACICO</h3>
+                </div>
+                <div class="tools-grid" id="softwareToolsGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <!-- TAB 4: APUNTES Y TRABAJOS -->
+            <section id="tab-apuntes" class="tab-panel">
+                <div class="panel-header-bar">
+                    <h2>📚 Biblioteca de Apuntes y Trabajos - FACICO UV</h2>
+                    <p>Encuentra resúmenes, síntesis de lecturas, guiones y ensayos ordenados por materia y semestre.</p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="filter-toolbar">
+                    <div class="filter-group">
+                        <label for="apunteSearch">🔎 Buscar:</label>
+                        <input type="text" id="apunteSearch" placeholder="Título, profesor, tema..." oninput="window.filterNotesContent()">
+                    </div>
+                    <div class="filter-group">
+                        <label for="apunteSemestreFilter">🎓 Semestre:</label>
+                        <select id="apunteSemestreFilter" onchange="window.filterNotesContent()">
+                            <option value="todos">Todos los semestres</option>
+                            <option value="1">1º Semestre</option>
+                            <option value="2">2º Semestre</option>
+                            <option value="3">3º Semestre</option>
+                            <option value="4">4º Semestre</option>
+                            <option value="5">5º Semestre</option>
+                            <option value="6">6º Semestre</option>
+                            <option value="7">7º Semestre</option>
+                            <option value="8">8º Semestre</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="apunteMateriaFilter">📁 Materia:</label>
+                        <select id="apunteMateriaFilter" onchange="window.filterNotesContent()">
+                            <option value="todas">Todas las materias</option>
+                            <option value="Lengua I">Lengua I</option>
+                            <option value="Estudios Culturales Latinoamericanos">Estudios Culturales Latinoamericanos</option>
+                            <option value="Génesis y Evolución de la Comunicación">Génesis y Evolución de la Comunicación</option>
+                            <option value="Textos Periodísticos Informativos">Textos Periodísticos Informativos</option>
+                            <option value="Filosofía de la Comunicación">Filosofía de la Comunicación</option>
+                            <option value="Investigación en el Campo de la Comunicación">Investigación en el Campo de la Comunicación</option>
+                            <option value="Fotografía Básica">Fotografía Básica</option>
+                            <option value="Socioeconomía de la Comunicación">Socioeconomía de la Comunicación</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Active Filter Tags Indicator -->
+                <div id="activeFilterBadges" class="active-filter-badges" style="margin-bottom: 10px;"></div>
+
+                <!-- Notes Results List -->
+                <div class="notes-full-list" id="apuntesFullList">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </section>
+
+            <!-- TAB 5: GUÍAS DE EXÁMENES -->
+            <section id="tab-examenes" class="tab-panel">
+                <div class="panel-header-bar">
+                    <h2>📝 Guías de Estudio y Exámenes Anteriores</h2>
+                    <p>Prepárate para los parciales y extraordinarios de la facultad con guías resueltas por exalumnos.</p>
+                </div>
+
+                <div class="exam-list-container" id="examenesList">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </section>
+
+            <!-- TAB 6: PLANTILLAS -->
+            <section id="tab-plantillas" class="tab-panel">
+                <div class="panel-header-bar">
+                    <h2>📄 Plantillas y Formatos Descargables</h2>
+                    <p>Formatos reglamentarios, plantillas de guionismo, escaletas y herramientas de cálculo para la carrera de Comunicación.</p>
+                </div>
+
+                <div class="tools-grid">
+                    <div class="tool-card retro-card">
+                        <div class="card-header">
+                            <h3>🎬 Plantilla de Escaleta Audiovisual (TV / Radio)</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Formato estándar de dos columnas (Audio / Video) con tiempos parciales y absolutos para producciones de FACICO.</p>
+                            <span class="badge-mini">Formato .DOCX / .PDF</span>
+                            <button class="retro-btn btn-gold btn-block" onclick="window.downloadToolTemplate('Escaleta_Audiovisual_FACICO.docx')">💾 Descargar Plantilla</button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card retro-card">
+                        <div class="card-header">
+                            <h3>📜 Formato de Guion Literario de Cortometraje</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Plantilla en Courier 12pt con márgenes reglamentarios (Encabezado de escena, Acción, Personaje y Diálogo).</p>
+                            <span class="badge-mini">Formato .PDF / .TXT</span>
+                            <button class="retro-btn btn-gold btn-block" onclick="window.downloadToolTemplate('Guion_Literario_Template.pdf')">💾 Descargar Guion</button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card retro-card">
+                        <div class="card-header">
+                            <h3>📖 Manual APA 7.ª Edición (Resumen UV)</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Guía rápida de citas bibliográficas, referencias de videos, podcasts y redes sociales según el estándar universitario.</p>
+                            <span class="badge-mini">Formato .PDF</span>
+                            <button class="retro-btn btn-gold btn-block" onclick="window.downloadToolTemplate('Manual_Citas_APA7_UV.pdf')">💾 Descargar Manual</button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card retro-card">
+                        <div class="card-header">
+                            <h3>💰 Presupuesto de Producción para Cortometraje</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Plantilla de Excel para desglosar viáticos, alquiler de equipo, alimentación de crew y postproducción.</p>
+                            <span class="badge-mini">Formato .XLSX</span>
+                            <button class="retro-btn btn-gold btn-block" onclick="window.downloadToolTemplate('Presupuesto_Corto_FACICO.xlsx')">💾 Descargar Excel</button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card retro-card">
+                        <div class="card-header">
+                            <h3>📋 Minuta de Rodaje y Reporte de Cámara</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Hoja de control para claqueta, tomas buenas/malas, lentes utilizados y registros de audio.</p>
+                            <span class="badge-mini">Formato .PDF</span>
+                            <button class="retro-btn btn-gold btn-block" onclick="window.downloadToolTemplate('Minuta_Rodaje_FACICO.pdf')">💾 Descargar Minuta</button>
+                        </div>
+                    </div>
+
+                    <div class="tool-card retro-card">
+                        <div class="card-header">
+                            <h3>📊 Calculadora de Promedio Ponderado UV</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Calcula tu promedio de calificaciones considerando los créditos de las materias del mapa curricular de Comunicación.</p>
+                            <button class="retro-btn btn-green btn-block" onclick="window.openCalcModal()">🧮 Abrir Calculadora</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 7: LIBROS -->
+            <section id="tab-libros" class="tab-panel">
+                <div class="panel-header-bar">
+                    <h2>📕 Biblioteca de Libros de Comunicación UV</h2>
+                    <p>Textos teóricos fundamentales, manuales de periodismo, semiótica y guionismo recomendados en la facultad.</p>
+                </div>
+
+                <!-- Book Filter -->
+                <div class="filter-toolbar">
+                    <div class="filter-group">
+                        <label for="bookSearch">🔎 Buscar Libro / Autor:</label>
+                        <input type="text" id="bookSearch" placeholder="Barthes, McLuhan, McKee..." oninput="window.filterBooks()">
+                    </div>
+                    <div class="filter-group">
+                        <label for="bookCategory">📁 Área Teórica:</label>
+                        <select id="bookCategory" onchange="window.filterBooks()">
+                            <option value="todas">Todas las áreas</option>
+                            <option value="Semiótica">Semiótica y Análisis</option>
+                            <option value="Teorías">Teorías de la Comunicación</option>
+                            <option value="Guionismo">Guionismo y Cine</option>
+                            <option value="Periodismo">Periodismo y Fotografía</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Books Grid -->
+                <div class="books-grid" id="booksGrid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+
+                <!-- BOOK REQUEST FORM AT BOTTOM -->
+                <div class="retro-card book-request-card" style="margin-top: 30px;">
+                    <div class="card-header">
+                        <h3>📩 ¿No encuentras el libro que buscas? ¡Solicítalo aquí!</h3>
+                    </div>
+                    <div class="card-body">
+                        <p style="font-size: 11px; margin-bottom: 10px; color: #334155;">Si necesitas un libro teórico o manual para alguna materia de FACICO que aún no esté disponible en PDF, envíanos tu solicitud y la comunidad lo conseguirá:</p>
+                        <form id="bookRequestForm" onsubmit="event.preventDefault(); window.handleBookRequestSubmit();">
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="reqBookTitle">📖 Título del Libro / Obra:</label>
+                                    <input type="text" id="reqBookTitle" placeholder="Ej: La Opinión Pública" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reqBookAuthor">👤 Autor:</label>
+                                    <input type="text" id="reqBookAuthor" placeholder="Ej: Walter Lippmann" required>
+                                </div>
+                            </div>
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="reqBookMateria">📚 Materia / Asignatura:</label>
+                                    <input type="text" id="reqBookMateria" placeholder="Ej: Teorías de la Comunicación I" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reqStudentNick">👤 Tu Nombre / Apodo UVago:</label>
+                                    <input type="text" id="reqStudentNick" placeholder="Ej: Comunicólogo_FACICO" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="retro-btn btn-green btn-block">🚀 ENVIAR SOLICITUD DE LIBRO</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB: ENVÍO DE APUNTE A REVISIÓN -->
+            <section id="tab-subir" class="tab-panel">
+                <div class="panel-header-bar" style="background: linear-gradient(180deg, var(--color-uv-green) 0%, var(--color-uv-green-dark) 100%);">
+                    <h2><span class="xp-icon xp-upload"></span> Envío de Apuntes para Inspección Manual por Correo</h2>
+                    <p>Contribuye con tus resúmenes o guías para apoyar a la comunidad FACICO. Todos los envíos son inspeccionados vía correo antes de ser integrados al portal.</p>
+                </div>
+
+                <div class="notice-card retro-card" style="margin-bottom: 20px; border-color: var(--color-uv-green); background: var(--color-uv-green-light);">
+                    <div class="card-body" style="font-size: 12px; padding: 12px;">
+                        <p><strong>📧 Proceso de Moderación Estudiantil:</strong> Para garantizar la veracidad de los apuntes y evitar contenidos inapropiados o spam, los materiales no se cargan automáticamente a la página web. Al completar este formulario y presionar enviar, la propuesta será enviada al correo oficial de inspección <code>apuntes.uvago.facico@gmail.com</code> donde el equipo del Rincón del UVago revisará el documento y lo agregará de forma manual al catálogo del portal.</p>
+                    </div>
+                </div>
+
+                <!-- Template Selection Badges -->
+                <div class="template-badges-bar">
+                    <span style="font-size: 10px; font-weight: bold; color: var(--color-uv-blue-dark);">✨ Cargar Plantilla Rápida:</span>
+                    <button type="button" class="template-badge-btn" onclick="window.applyTabSubirTemplate('clase')">📝 Apunte de Clase</button>
+                    <button type="button" class="template-badge-btn" onclick="window.applyTabSubirTemplate('libro')">📖 Resumen de Libro</button>
+                    <button type="button" class="template-badge-btn" onclick="window.applyTabSubirTemplate('examen')">🎯 Guía de Examen</button>
+                    <button type="button" class="template-badge-btn" onclick="window.applyTabSubirTemplate('limpiar')" style="border-color: #94A3B8; color: #64748B;">🧹 Limpiar</button>
+                </div>
+
+                <div class="retro-card upload-form-card">
+                    <div class="card-header" style="background: linear-gradient(180deg, var(--color-uv-blue) 0%, var(--color-uv-blue-dark) 100%);">
+                        <h3>📋 Formulario de Propuesta de Material Estudiantil</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="uploadNoteForm" onsubmit="event.preventDefault(); window.handleSubirTabSubmit();">
+                            <div class="form-group">
+                                <label for="upTitle">📌 Título del Apunte / Trabajo:</label>
+                                <input type="text" id="upTitle" placeholder="Ej: Resumen de Semiótica de la Imagen (Roland Barthes)" required>
+                            </div>
+
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="upMateria">📚 Materia / Asignatura:</label>
+                                    <select id="upMateria" required>
+                                        <option value="Lengua I">Lengua I</option>
+                                        <option value="Estudios Culturales Latinoamericanos">Estudios Culturales Latinoamericanos</option>
+                                        <option value="Génesis y Evolución de la Comunicación">Génesis y Evolución de la Comunicación</option>
+                                        <option value="Textos Periodísticos Informativos">Textos Periodísticos Informativos</option>
+                                        <option value="Filosofía de la Comunicación">Filosofía de la Comunicación</option>
+                                        <option value="Investigación en el Campo de la Comunicación">Investigación en el Campo de la Comunicación</option>
+                                        <option value="Fotografía Básica">Fotografía Básica</option>
+                                        <option value="Socioeconomía de la Comunicación">Socioeconomía de la Comunicación</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upSemestre">🎓 Semestre:</label>
+                                    <select id="upSemestre" required>
+                                        <option value="1">1º Semestre</option>
+                                        <option value="2">2º Semestre</option>
+                                        <option value="3">3º Semestre</option>
+                                        <option value="4">4º Semestre</option>
+                                        <option value="5">5º Semestre</option>
+                                        <option value="6">6º Semestre</option>
+                                        <option value="7">7º Semestre</option>
+                                        <option value="8">8º Semestre</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row-2">
+                                <div class="form-group">
+                                    <label for="upAuthor">👤 Tu Nombre / Apodo UVago:</label>
+                                    <input type="text" id="upAuthor" placeholder="Ej: VagoComunicador_04" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="upProfesor">👨‍🏫 Profesor (Opcional):</label>
+                                    <input type="text" id="upProfesor" placeholder="Ej: Dra. Carmen Morales">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="upSummary">📝 Breve Resumen del Contenido:</label>
+                                <textarea id="upSummary" rows="2" placeholder="Explica de qué trata este tema y cómo apoya para el examen..." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="upBody">📄 Texto Completo del Apunte:</label>
+                                <div class="format-toolbar">
+                                    <button type="button" class="format-btn" onclick="window.insertFormatTag('upBody', '📌 ENCABEZADO:\n')">📌 Encabezado</button>
+                                    <button type="button" class="format-btn" onclick="window.insertFormatTag('upBody', '- Puntos clave: ')">• Punto Clave</button>
+                                    <button type="button" class="format-btn" onclick="window.insertFormatTag('upBody', '\n💡 TIP DE EXAMEN: ')">💡 Tip Examen</button>
+                                    <button type="button" class="format-btn" onclick="window.insertFormatTag('upBody', '\n❓ PREGUNTA FRECUENTE: ')">❓ Pregunta</button>
+                                </div>
+                                <textarea id="upBody" rows="10" placeholder="Pega aquí todo el contenido de tus apuntes, temas, guías resueltas o conceptos..." oninput="window.updateNoteCounters('upBody', 'upWordCount', 'upCharCount', 'upQualityStatus')" required></textarea>
+                                <div class="editor-counter-bar">
+                                    <span>📊 <strong id="upWordCount">0</strong> palabras | <strong id="upCharCount">0</strong> caracteres</span>
+                                    <span id="upQualityStatus">✍️ Comienza a escribir o selecciona una plantilla</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group file-group">
+                                <label for="upFile">📎 Adjuntar Documento Adicional (Opcional):</label>
+                                <input type="file" id="upFile" class="retro-file-input" accept=".pdf,.docx,.txt,.png,.jpg,.jpeg" onchange="window.handleNoteFileSelect(this, 'tabSubirFileBadge')">
+                                <div id="tabSubirFileBadge" style="font-size: 10px; color: var(--color-uv-green-dark); font-weight: bold; margin-top: 4px;"></div>
+                                <small class="help-text">Formatos sugeridos: .pdf, .docx, .txt, .png, .jpg</small>
+                            </div>
+
+                            <button type="submit" class="retro-btn btn-green btn-block btn-lg" style="margin-top: 10px;">
+                                🚀 ENVIAR APUNTE A CORREO DE INSPECCIÓN (apuntes.uvago.facico@gmail.com)
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- TAB 9: EL PASILLO (COMIDA Y EMPRENDIMIENTOS ESTUDIANTILES) -->
+            <section id="tab-pasillo" class="tab-panel">
+                <div class="panel-header-bar" style="background: linear-gradient(180deg, var(--color-uv-green) 0%, var(--color-uv-green-dark) 100%); color: #FFFFFF;">
+                    <h2><span class="xp-icon xp-pasillo"></span> 🍿 El Pasillo FACICO: Comida, Snacks & Emprendimientos Estudiantiles 🛍️</h2>
+                    <p>Apoya el talento local de la facultad. Descubre postres, antojitos, bebidas, repostería, servicios de diseño, fotografía y manualidades elaborados por los mismos alumnos de FACICO UV.</p>
+                </div>
+
+                <!-- Pasillo Toolbar Filter & Search -->
+                <div class="filter-toolbar" style="margin-bottom: 15px;">
+                    <div class="filter-group">
+                        <label for="pasilloSearch">🔎 Buscar antojo o negocio:</label>
+                        <input type="text" id="pasilloSearch" placeholder="Ej: Pay de limón, brownies, café, tacos, stickers..." oninput="window.filterPasilloGrid()">
+                    </div>
+                    <div class="filter-group">
+                        <label for="pasilloCategory">🏷️ Categoría:</label>
+                        <select id="pasilloCategory" onchange="window.filterPasilloGrid()">
+                            <option value="todas">Todas las categorías</option>
+                            <option value="Antojitos & Comida">🍿 Antojitos & Comida</option>
+                            <option value="Postres & Repostería">🍰 Postres & Repostería</option>
+                            <option value="Bebidas & Cafés">☕ Bebidas & Cafés</option>
+                            <option value="Diseño & Servicios">🎨 Diseño & Servicios</option>
+                            <option value="Manualidades & Papelería">✂️ Manualidades & Papelería</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Business Grid -->
+                <div class="tools-grid" id="pasilloGrid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </section>
+
+            <!-- TAB 10: EVENTOS FACICO Y CULTURALES -->
+            <section id="tab-eventos" class="tab-panel">
+                <div class="panel-header-bar" style="background: linear-gradient(180deg, var(--color-uv-blue-dark) 0%, var(--color-uv-blue) 100%); color: #FFFFFF;">
+                    <h2><span class="xp-icon xp-calendar"></span> 📅 Cartelera Mensual de Eventos FACICO UV & Cultura 🎟️</h2>
+                    <p>Calendario oficial y estudiantil de actividades: proyecciones de cine, festivales de cortometrajes, conferencias, talleres técnicos y convivencias en FACICO.</p>
+                </div>
+
+                <!-- Event Filters -->
+                <div class="filter-toolbar">
+                    <div class="filter-group">
+                        <label for="eventCategoryFilter">🏷️ Categoría:</label>
+                        <select id="eventCategoryFilter" onchange="window.filterEventsGrid()">
+                            <option value="todas">Todos los eventos del mes</option>
+                            <option value="Cine & Cortos">🎬 Cine & Cortometrajes</option>
+                            <option value="Conferencias & Congresos">🎙️ Conferencias & Congresos</option>
+                            <option value="Talleres & Cursos">📸 Talleres & Cursos</option>
+                            <option value="Eventos Estudiantiles">🍿 Eventos Estudiantiles & Convivencia</option>
+                        </select>
+                    </div>
+                    <div class="filter-group" style="flex: 1;">
+                        <label for="eventSearchInput">🔍 Buscar evento:</label>
+                        <input type="text" id="eventSearchInput" placeholder="Ej: Cortometrajes, Fotografía, Periodismo..." oninput="window.filterEventsGrid()">
+                    </div>
+                </div>
+
+                <!-- Events Grid -->
+                <div class="events-grid" id="eventsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; margin-top: 15px;">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </section>
+
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="sidebar sidebar-right">
+
+            <!-- Recuadro Lateral: Enviar Apunte a Revisión por Correo -->
+            <div class="retro-card card-upload-sidebar" style="border-color: var(--color-uv-green);">
+                <div class="card-header" style="background: linear-gradient(180deg, var(--color-uv-green) 0%, var(--color-uv-green-dark) 100%);">
+                    <h3><span class="xp-icon xp-upload"></span> ¡Compartir Apunte!</h3>
+                </div>
+                <div class="card-body">
+                    <p style="font-size: 11px; color: var(--text-dark); margin-bottom: 8px;">¿Tienes resúmenes, guías o exámenes de FACICO? Compártelos con la comunidad.</p>
+                    <div style="background: #F8FAFC; border: 1px dashed var(--color-uv-green); padding: 6px; font-size: 10px; margin-bottom: 8px; border-radius: 3px;">
+                        📧 <b>Moderación por Correo:</b> Todo apunte será enviado al correo oficial de inspección antes de publicarse manualmente en el portal.
+                    </div>
+                    <button type="button" class="retro-btn btn-green btn-block" onclick="window.openUploadNoteModal();">
+                        <span class="xp-icon xp-upload"></span> Enviar a Correo de Revisión
+                    </button>
+                </div>
+            </div>
+
+            <!-- Recuadro Lateral: Anunciar Emprendimiento por Correo -->
+            <div class="retro-card card-upload-sidebar" style="border-color: var(--color-uv-green);">
+                <div class="card-header" style="background: linear-gradient(180deg, var(--color-uv-green) 0%, var(--color-uv-green-dark) 100%);">
+                    <h3><span class="xp-icon xp-pasillo"></span> ¡Anunciar Puesto!</h3>
+                </div>
+                <div class="card-body">
+                    <p style="font-size: 11px; color: var(--text-dark); margin-bottom: 8px;">¿Vendes comida, café, postres o haces fotos en FACICO? Anúnciate en El Pasillo.</p>
+                    <div style="background: #F8FAFC; border: 1px dashed var(--color-uv-green); padding: 6px; font-size: 10px; margin-bottom: 8px; border-radius: 3px;">
+                        📧 <b>Moderación por Correo:</b> Tu emprendimiento se enviará a <b>apuntes.uvago.facico@gmail.com</b> para inspección manual antes de publicarlo.
+                    </div>
+                    <button type="button" class="retro-btn btn-green btn-block" onclick="window.openUploadPasilloModal();">
+                        <span class="xp-icon xp-pasillo"></span> Enviar Puesto a Revisión
+                    </button>
+                </div>
+            </div>
+
+            <!-- Top Downloads Ranking -->
+            <div class="retro-card">
+                <div class="card-header">
+                    <h3>🏆 Top 5 Apuntes Más Bajados</h3>
+                </div>
+                <div class="card-body">
+                    <ol class="top-ranking-list" id="topNotesRanking">
+                        <!-- Populated by JS -->
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Funny UV Quote / Frase del Día -->
+            <div class="retro-card card-quote">
+                <div class="card-header">
+                    <h3>💬 Frase del Día FACICO</h3>
+                </div>
+                <div class="card-body">
+                    <blockquote id="dailyQuote">
+                        "El medio es el mensaje... pero la falta de audio en la entrega final es una reprobada segura."
+                    </blockquote>
+                    <span class="quote-author">— Proverbio del Estudiante de Comunicación UV</span>
+                </div>
+            </div>
+
+            <!-- Featured Pasillo Deals -->
+            <div class="retro-card card-notices">
+                <div class="card-header" style="background: linear-gradient(180deg, var(--color-uv-green) 0%, var(--color-uv-green-dark) 100%);">
+                    <h3 style="color: #FFFFFF;"><span class="xp-icon xp-pasillo"></span> 🏷️ Ofertas del Pasillo</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="bullet-notice-list">
+                        <li><strong>Los Brownies Mágicos:</strong> Combo 4 brownies por $90 MXN mencionando El Rincón del UVago.</li>
+                        <li><strong>Tacos El Comunicólogo:</strong> Paquete 3 tacos + Agua fresca por $35 MXN de 8:30 a 11:30 hrs.</li>
+                        <li><strong>Cold Brew Fórum:</strong> Descuento de $5 MXN en Cold Brew Latte en las bancas de biblioteca.</li>
+                        <li><strong>Pastes de Hidalgo:</strong> 2 pastes calientitos por $45 MXN en el pasillo A-CCEB.</li>
+                        <li><strong>Kevin Fotos:</strong> 10% de descuento en foto para credenciales y portafolio comunicólogo.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vintage Counter -->
+            <div class="retro-card card-counter">
+                <div class="card-header">
+                    <h3>📟 Contador de Visitas</h3>
+                </div>
+                <div class="card-body counter-box">
+                    <p class="counter-label">Eres el visitante número:</p>
+                    <div class="odometer" id="hitCounter">00482914</div>
+                    <div class="sound-toggle-box">
+                        <label><input type="checkbox" id="soundToggle" checked> 🔊 Sonidos Retro</label>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- Retro Footer -->
+    <footer class="retro-footer">
+        <div class="footer-content">
+            <p>© 2000-2026 <strong>El Rincón del UVago</strong> - Sitio tributo de apoyo estudiantil para la Licenciatura en Ciencias de la Comunicación (FACICO - Universidad Veracruzana).</p>
+            <p class="footer-subtext">Diseñado con orgullo, café y desvelos en los pastitos de FACICO. ¡Lis de Veracruz Arte, Ciencia, Luz y Apuntes!</p>
+            <div class="footer-links">
+                <a href="#inicio" onclick="window.switchTab('tab-inicio')">Inicio</a> | 
+                <a href="#noticias" onclick="window.switchTab('tab-noticias')">Noticias</a> | 
+                <a href="#herramientas" onclick="window.switchTab('tab-herramientas')">Herramientas</a> | 
+                <a href="#apuntes" onclick="window.switchTab('tab-apuntes')">Apuntes</a> | 
+                <a href="#libros" onclick="window.switchTab('tab-libros')">Libros</a> | 
+                <a href="#profesores" onclick="window.switchTab('tab-profesores')">Profesores</a> | 
+                <a href="#pasillo" onclick="window.switchTab('tab-pasillo')">Pasillo</a> | 
+                <a href="#eventos" onclick="window.switchTab('tab-eventos')">Eventos</a> | 
+                <a href="#" onclick="event.preventDefault(); window.openUploadModal();">Enviar Apunte (Email)</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: Visor de Apunte Completo -->
+    <div id="noteModal" class="retro-modal-backdrop hidden">
+        <div class="retro-modal-window">
+            <div class="modal-title-bar">
+                <span class="modal-title-text" id="modalNoteTitle">Visualizador de Apunte</span>
+                <button class="modal-close-btn" onclick="window.closeNoteModal()">[ X ]</button>
+            </div>
+            <div class="modal-body-content">
+                <div class="note-paper-container">
+                    <div class="paper-header">
+                        <h2 id="modalNoteHeaderTitle">Resumen de Semiótica</h2>
+                        <div class="paper-meta">
+                            <span class="paper-badge" id="modalNoteMateria">Semiótica</span>
+                            <span class="paper-badge badge-orange" id="modalNoteSemestre">3º Semestre</span>
+                            <span class="paper-author" id="modalNoteAuthor">Subido por: UVago</span>
+                        </div>
+                    </div>
+                    <hr class="paper-divider">
+                    <div class="paper-text" id="modalNoteText">
+                        <!-- Loaded by JS -->
+                    </div>
+                    <hr class="paper-divider">
+                    <!-- Rating and Download Bar -->
+                    <div class="paper-actions-bar">
+                        <div class="rating-box">
+                            <span>¿Te sirvió este apunte? </span>
+                            <button class="retro-btn btn-sm" onclick="window.rateNote(5)">⭐ 5/5</button>
+                            <button class="retro-btn btn-sm" onclick="window.rateNote(4)">👍 4/5</button>
+                        </div>
+                        <div class="download-box">
+                            <button class="retro-btn btn-gold" onclick="window.downloadCurrentNote()">💾 Descargar Apunte (.TXT)</button>
+                            <button class="retro-btn" onclick="window.printCurrentNote()">🖨️ Imprimir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Visor de Ficha del Puesto de El Pasillo -->
+    <div id="pasilloModal" class="retro-modal-backdrop hidden">
+        <div class="retro-modal-window">
+            <div class="modal-title-bar" style="background: linear-gradient(180deg, var(--color-uv-green) 0%, var(--color-uv-green-dark) 100%);">
+                <span class="modal-title-text"><span class="xp-icon xp-pasillo"></span> <span id="modalPasTitleBar">Ficha de Emprendimiento - El Pasillo</span></span>
+                <button class="modal-close-btn" onclick="window.closePasilloModal()">[ X ]</button>
+            </div>
+            <div class="modal-body-content">
+                <div class="note-paper-container">
+                    <div class="paper-header">
+                        <h2 id="modalPasName">Los Brownies Mágicos de FACICO</h2>
+                        <div class="paper-meta">
+                            <span class="paper-badge badge-orange" id="modalPasCategory">Postres & Repostería</span>
+                            <span class="paper-badge" id="modalPasBadge">⭐ Top Recomendado</span>
+                            <span class="paper-author" id="modalPasFounder">Fundador(a): Valeria Martínez (4º Semestre)</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #F8FAFC; border: 1px dashed var(--color-uv-green); padding: 10px; font-size: 11px; margin: 10px 0; border-radius: 3px;">
+                        <p style="margin: 3px 0; color: var(--color-uv-blue-dark);">📍 <b>Punto de Entrega / Horario:</b> <span id="modalPasLocation">Pastitos y Pasillo Principal</span></p>
+                        <p style="margin: 3px 0; color: var(--color-uv-green-dark);">💲 <b>Rango de Precios:</b> <span id="modalPasPrice">$20 a $35 MXN</span></p>
+                        <p style="margin: 3px 0; color: #334155;">📱 <b>Contacto Directo:</b> <span id="modalPasContact">@brownies_facico_uv</span></p>
+                    </div>
+
+                    <hr class="paper-divider">
+                    <div class="paper-text" id="modalPasFullDetail">
+                        <!-- Loaded dynamically via JS -->
+                    </div>
+                    <hr class="paper-divider">
+
+                    <!-- Actions Bar -->
+                    <div class="paper-actions-bar">
+                        <div class="rating-box">
+                            <span>¿Recomiendas este puesto? </span>
+                            <button class="retro-btn btn-sm" onclick="window.ratePasillo(5)">⭐ Recomendado (5/5)</button>
+                        </div>
+                        <div class="download-box">
+                            <button class="retro-btn btn-green" id="modalPasContactBtn" onclick="window.contactCurrentPasillo()">💬 Contactar por WhatsApp / Instagram</button>
+                            <button class="retro-btn btn-gold" onclick="window.sharePasillo()">📋 Copiar Contacto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Formulario Emergente para Compartir Apunte -->
+    <div id="uploadNoteModal" class="retro-modal-backdrop hidden">
+        <div class="retro-modal-window">
+            <div class="modal-title-bar" style="background: linear-gradient(180deg, var(--color-uv-green) 0%, var(--color-uv-green-dark) 100%);">
+                <span class="modal-title-text"><span class="xp-icon xp-upload"></span> ⬆️ Formulario de Envío de Apunte / Trabajo FACICO</span>
+                <button class="modal-close-btn" onclick="window.closeUploadNoteModal()">[ X ]</button>
+            </div>
+            <div class="modal-body-content">
+                <div style="background: #F8FAFC; border: 1px dashed var(--color-uv-green); padding: 10px; font-size: 11px; margin-bottom: 12px; border-radius: 3px;">
+                    📧 <b>Moderación e Inspección por Correo:</b> Al presionar enviar, los datos de tu apunte serán redactados y enviados al correo oficial de revisión (<b>apuntes.uvago.facico@gmail.com</b>) para ser inspeccionados manualmente por el equipo antes de su publicación en el portal.
+                </div>
+
+                <!-- Template Selection Badges -->
+                <div class="template-badges-bar">
+                    <span style="font-size: 10px; font-weight: bold; color: var(--color-uv-blue-dark);">✨ Cargar Plantilla Rápida:</span>
+                    <button type="button" class="template-badge-btn" onclick="window.applyNoteTemplate('clase')">📝 Apunte de Clase</button>
+                    <button type="button" class="template-badge-btn" onclick="window.applyNoteTemplate('libro')">📖 Resumen de Libro</button>
+                    <button type="button" class="template-badge-btn" onclick="window.applyNoteTemplate('examen')">🎯 Guía de Examen</button>
+                    <button type="button" class="template-badge-btn" onclick="window.applyNoteTemplate('limpiar')" style="border-color: #94A3B8; color: #64748B;">🧹 Limpiar</button>
+                </div>
+
+                <form id="modalNoteForm" onsubmit="event.preventDefault(); window.handleModalNoteSubmit();">
+                    <div class="form-group">
+                        <label for="mUpTitle">📌 Título del Apunte / Trabajo:</label>
+                        <input type="text" id="mUpTitle" placeholder="Ej: Resumen de Semiótica de la Imagen (Roland Barthes)" required>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="mUpMateria">📚 Materia / Asignatura:</label>
+                            <select id="mUpMateria" required>
+                                <option value="Lengua I">Lengua I</option>
+                                <option value="Estudios Culturales Latinoamericanos">Estudios Culturales Latinoamericanos</option>
+                                <option value="Génesis y Evolución de la Comunicación">Génesis y Evolución de la Comunicación</option>
+                                <option value="Textos Periodísticos Informativos">Textos Periodísticos Informativos</option>
+                                <option value="Filosofía de la Comunicación">Filosofía de la Comunicación</option>
+                                <option value="Investigación en el Campo de la Comunicación">Investigación en el Campo de la Comunicación</option>
+                                <option value="Fotografía Básica">Fotografía Básica</option>
+                                <option value="Socioeconomía de la Comunicación">Socioeconomía de la Comunicación</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mUpSemestre">🎓 Semestre:</label>
+                            <select id="mUpSemestre" required>
+                                <option value="1º Semestre">1º Semestre</option>
+                                <option value="2º Semestre">2º Semestre</option>
+                                <option value="3º Semestre">3º Semestre</option>
+                                <option value="4º Semestre">4º Semestre</option>
+                                <option value="5º Semestre">5º Semestre</option>
+                                <option value="6º Semestre">6º Semestre</option>
+                                <option value="7º Semestre">7º Semestre</option>
+                                <option value="8º Semestre">8º Semestre</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="mUpAuthor">👤 Tu Nombre / Apodo UVago:</label>
+                            <input type="text" id="mUpAuthor" placeholder="Ej: VagoComunicador_04" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mUpProfesor">👨‍🏫 Profesor (Opcional):</label>
+                            <input type="text" id="mUpProfesor" placeholder="Ej: Dra. Alicia Rendón">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mUpSummary">📝 Breve Resumen del Contenido:</label>
+                        <input type="text" id="mUpSummary" placeholder="Ej: Explica de qué trata este tema y cómo apoya para el examen..." required>
+                    </div>
+
+                    <!-- Text Editor with Quick Format Toolbar -->
+                    <div class="form-group">
+                        <label for="mUpContent">📄 Texto Completo o Resumen del Apunte:</label>
+                        <div class="format-toolbar">
+                            <button type="button" class="format-btn" onclick="window.insertFormatTag('mUpContent', '📌 ENCABEZADO:\n')">📌 Encabezado</button>
+                            <button type="button" class="format-btn" onclick="window.insertFormatTag('mUpContent', '- Puntos clave: ')">• Punto Clave</button>
+                            <button type="button" class="format-btn" onclick="window.insertFormatTag('mUpContent', '\n💡 TIP DE EXAMEN: ')">💡 Tip Examen</button>
+                            <button type="button" class="format-btn" onclick="window.insertFormatTag('mUpContent', '\n❓ PREGUNTA FRECUENTE: ')">❓ Pregunta</button>
+                        </div>
+                        <textarea id="mUpContent" rows="10" placeholder="Pega aquí todo el contenido de tus apuntes, temas, guías resueltas o conceptos..." oninput="window.updateNoteCounters('mUpContent', 'mUpWordCount', 'mUpCharCount', 'mUpQualityStatus')" required></textarea>
+                        <div class="editor-counter-bar">
+                            <span>📊 <strong id="mUpWordCount">0</strong> palabras | <strong id="mUpCharCount">0</strong> caracteres</span>
+                            <span id="mUpQualityStatus">✍️ Comienza a escribir o selecciona una plantilla</span>
+                        </div>
+                    </div>
+
+                    <!-- File Attachment Option -->
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label for="mUpFile">📁 Adjuntar Documento o Captura de Apunte (Opcional):</label>
+                        <input type="file" id="mUpFile" class="retro-file-input" accept=".pdf,.docx,.txt,.png,.jpg,.jpeg" onchange="window.handleNoteFileSelect(this, 'mUpFileBadge')">
+                        <div id="mUpFileBadge" style="font-size: 10px; color: var(--color-uv-green-dark); font-weight: bold; margin-top: 4px;"></div>
+                        <small class="help-text">Formatos aceptados: .pdf, .docx, .txt, .png, .jpg (máx. 15MB)</small>
+                    </div>
+
+                    <!-- Action Buttons Bar -->
+                    <div style="display: flex; gap: 8px; margin-top: 12px;">
+                        <button type="submit" class="retro-btn btn-green btn-block btn-lg" style="flex: 2;">
+                            🚀 ENVIAR VÍA CORREO (apuntes.uvago.facico@gmail.com)
+                        </button>
+                        <button type="button" class="retro-btn btn-gold" style="flex: 1; font-size: 10px;" onclick="window.copyModalNoteData()">
+                            📋 COPIAR DATOS
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Formulario Emergente para Anunciar Emprendimiento -->
+    <div id="uploadPasilloModal" class="retro-modal-backdrop hidden">
+        <div class="retro-modal-window">
+            <div class="modal-title-bar" style="background: linear-gradient(180deg, var(--color-uv-green) 0%, var(--color-uv-green-dark) 100%);">
+                <span class="modal-title-text"><span class="xp-icon xp-pasillo"></span> 🛍️ Formulario para Anunciar Emprendimiento en El Pasillo</span>
+                <button class="modal-close-btn" onclick="window.closeUploadPasilloModal()">[ X ]</button>
+            </div>
+            <div class="modal-body-content">
+                <div style="background: #F8FAFC; border: 1px dashed var(--color-uv-green); padding: 10px; font-size: 11px; margin-bottom: 15px; border-radius: 3px;">
+                    📧 <b>Moderación e Inspección por Correo:</b> Al presionar enviar, la información de tu puesto será enviada al correo oficial de inspección manual (<b>apuntes.uvago.facico@gmail.com</b>) antes de ser publicada en El Pasillo.
+                </div>
+                <form id="modalPasilloForm" onsubmit="event.preventDefault(); window.handleModalPasilloSubmit();">
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="mPasNombre">🛍️ Nombre del Emprendimiento / Puesto:</label>
+                            <input type="text" id="mPasNombre" placeholder="Ej: Los Brownies del UVago" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mPasCategoria">🏷️ Categoría:</label>
+                            <select id="mPasCategoria" required>
+                                <option value="Postres & Repostería">🍰 Postres & Repostería</option>
+                                <option value="Antojitos & Comida">🍿 Antojitos & Comida</option>
+                                <option value="Bebidas & Cafés">☕ Bebidas & Cafés</option>
+                                <option value="Diseño & Servicios">🎨 Diseño & Servicios</option>
+                                <option value="Manualidades & Papelería">✂️ Manualidades & Papelería</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="mPasFundador">👤 Nombre y Semestre del Fundador(a):</label>
+                            <input type="text" id="mPasFundador" placeholder="Ej: Elena Ruiz (3º Semestre)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mPasUbicacion">📍 Punto de Entrega / Horario:</label>
+                            <input type="text" id="mPasUbicacion" placeholder="Ej: En los Pastitos (12:00 a 14:00 hrs)" required>
+                        </div>
+                    </div>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="mPasPrecios">💲 Rango de Precios:</label>
+                            <input type="text" id="mPasPrecios" placeholder="Ej: $15 a $35 MXN" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mPasContacto">📱 WhatsApp o Instagram de contacto:</label>
+                            <input type="text" id="mPasContacto" placeholder="Ej: 2291234567 o @brownies_facico" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mPasDescripcion">📝 Descripción del Menú / Servicio:</label>
+                        <textarea id="mPasDescripcion" rows="3" placeholder="Describe lo que vendes, sabores, promociones para entrega en pasillos o salones..." required></textarea>
+                    </div>
+                    <button type="submit" class="retro-btn btn-green btn-block btn-lg" style="margin-top: 10px;">
+                        🚀 ENVIAR EMPRENDIMIENTO A CORREO DE INSPECCIÓN (apuntes.uvago.facico@gmail.com)
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Calculadora de Promedio UV -->
+    <div id="calcModal" class="retro-modal-backdrop hidden">
+        <div class="retro-modal-window modal-sm">
+            <div class="modal-title-bar">
+                <span class="modal-title-text">Calculadora de Promedio UVago</span>
+                <button class="modal-close-btn" onclick="window.closeCalcModal()">[ X ]</button>
+            </div>
+            <div class="modal-body-content">
+                <p>Ingresa hasta 5 calificaciones de este semestre para obtener tu promedio:</p>
+                <div class="calc-inputs" id="calcInputs">
+                    <input type="number" min="0" max="10" step="0.1" class="calc-val" placeholder="Calificación 1 (Ej: 9.5)">
+                    <input type="number" min="0" max="10" step="0.1" class="calc-val" placeholder="Calificación 2 (Ej: 8.0)">
+                    <input type="number" min="0" max="10" step="0.1" class="calc-val" placeholder="Calificación 3 (Ej: 10.0)">
+                    <input type="number" min="0" max="10" step="0.1" class="calc-val" placeholder="Calificación 4 (Ej: 7.5)">
+                <button class="retro-btn btn-gold btn-block" onclick="window.calculateAverage()">🧮 Calcular Promedio</button>
+                <div id="calcResult" class="calc-result-box hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js?v=26"></script>
+</body>
+</html>

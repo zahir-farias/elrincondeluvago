@@ -1,0 +1,1729 @@
+/* ==========================================================================
+   El Rincón del UVago - Estilos Retro Años 2000 (Edición Institucional UV)
+   Paleta de Colores UV: Azul UV (#00337F), Verde UV (#007A33), Blanco (#FFFFFF)
+   ========================================================================== */
+
+:root {
+    --color-uv-blue: #00337F;
+    --color-uv-blue-dark: #002255;
+    --color-uv-blue-light: #E8EEF5;
+    --color-uv-blue-hover: #0044A3;
+
+    --color-uv-green: #007A33;
+    --color-uv-green-dark: #005C26;
+    --color-uv-green-light: #E6F3EC;
+    --color-uv-green-hover: #009940;
+
+    --color-white: #FFFFFF;
+    --color-bg-light: #F4F7FA;
+
+    --text-dark: #0F172A;
+    --text-muted: #475569;
+    --text-light: #FFFFFF;
+
+    --border-bevel-dark: #001C47;
+    --border-bevel-light: #FFFFFF;
+
+    --font-main: 'Verdana', 'Geneva', sans-serif;
+    --font-mono: 'Courier Prime', monospace;
+    --font-retro-heading: 'Verdana', sans-serif;
+}
+
+/* ==========================================================================
+   WINDOWS XP & MSN MESSENGER RETRO ICONS SET (SVGs Data URIs)
+   ========================================================================== */
+
+.xp-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: -2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 4px;
+}
+
+.xp-icon-lg {
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+}
+
+/* Windows XP Home Icon */
+.xp-home {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23003399" d="M8 1L1 7h2v7h10V7h2z"/><path fill="%23FFFFFF" d="M6 8h4v6H6z"/><path fill="%23FFD700" d="M7 9h2v2H7z"/></svg>');
+}
+
+/* Windows XP Pasillo / Shop Icon */
+.xp-pasillo {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23CC0000" d="M1 5l2-3h10l2 3v2H1z"/><path fill="%23FFD700" d="M1 7h14v7H1z"/><rect x="5" y="9" width="6" height="5" fill="%23FFFFFF"/><path stroke="%2300337F" stroke-width="1" d="M3 5v2M7 5v2M11 5v2"/></svg>');
+}
+
+/* Windows XP Newspaper Icon */
+.xp-news {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="1" y="2" width="14" height="12" rx="1" fill="%23FFFFFF" stroke="%2300337F" stroke-width="1.5"/><path stroke="%23007A33" stroke-width="1.5" d="M3 5h5M3 8h10M3 10h10M3 12h7"/><rect x="9" y="4" width="4" height="3" fill="%2300337F"/></svg>');
+}
+
+/* Windows XP Tools Icon */
+.xp-tools {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23888888" d="M2 14l5-5 2 2-5 5z"/><path fill="%2300337F" d="M12 2a3 3 0 00-3 4l-4 4 3 3 4-4a3 3 0 100-7z"/></svg>');
+}
+
+/* Windows XP Books Stack */
+.xp-books {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="1" y="11" width="14" height="3" fill="%2300337F" rx="0.5"/><rect x="2" y="7" width="12" height="3" fill="%23007A33" rx="0.5"/><rect x="3" y="3" width="10" height="3" fill="%23CC0000" rx="0.5"/><path stroke="%23FFFFFF" stroke-width="1" d="M3 12.5h10M4 8.5h8M5 4.5h6"/></svg>');
+}
+
+/* Windows XP Exam Notepad */
+.xp-exam {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="2" y="2" width="11" height="13" fill="%23FFEB3B" stroke="%238B4513"/><path stroke="%23333333" stroke-width="1" d="M4 5h7M4 8h7M4 11h5"/><path fill="%23C0392B" d="M11 11l4 4-2 1-1-2z"/></svg>');
+}
+
+/* Windows XP Template Document */
+.xp-template {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23FFFFFF" stroke="%2300337F" stroke-width="1" d="M2 1h8l4 4v10H2z"/><path fill="%23E8EEF5" d="M10 1v4h4z"/><path stroke="%23007A33" stroke-width="1" d="M4 6h4M4 9h8M4 12h6"/></svg>');
+}
+
+/* Windows XP Red Book */
+.xp-book-red {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="2" y="1" width="12" height="14" rx="1" fill="%23C0392B" stroke="%23800000"/><rect x="4" y="1" width="2" height="14" fill="%23DAA520"/><path stroke="%23FFFFFF" stroke-width="1" d="M7 4h6M7 7h6M7 10h4"/></svg>');
+}
+
+/* Windows XP Teacher Profile */
+.xp-teacher {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="5" r="3.5" fill="%23FFCC99" stroke="%2300337F"/><path fill="%2300337F" d="M2 15c0-4 3-6 6-6s6 2 6 6z"/><path fill="%23007A33" d="M3 3l5-2 5 2-5 2z"/></svg>');
+}
+
+/* Windows XP Upload Arrow */
+.xp-upload {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23007A33" stroke="%23FFFFFF" stroke-width="0.5" d="M8 1L3 7h3v5h4V7h3z"/><rect x="1" y="13" width="14" height="2" fill="%23FFFFFF"/></svg>');
+}
+
+/* Windows XP Yellow Folder */
+.xp-folder {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23FFC107" stroke="%23D97706" d="M1 3h5l2 2h7v9H1z"/><path fill="%23FFD54F" d="M1 6h14v7H1z"/></svg>');
+}
+
+/* Windows XP Floppy Disk 3.5" */
+.xp-floppy {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="1" fill="%2300337F"/><rect x="3" y="1" width="10" height="5" fill="%23FFFFFF"/><rect x="4" y="9" width="8" height="6" fill="%23E2E8F0"/><rect x="9" y="2" width="2" height="3" fill="%2300337F"/></svg>');
+}
+
+/* Windows XP Calendar Icon */
+.xp-calendar {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="1" y="2" width="14" height="13" rx="1" fill="%23FFFFFF" stroke="%2300337F" stroke-width="1"/><rect x="1" y="2" width="14" height="3" fill="%23CC0000"/><path fill="%2300337F" d="M4 1h2v3H4zM10 1h2v3h-2z"/><rect x="3" y="7" width="2" height="2" fill="%23007A33"/><rect x="7" y="7" width="2" height="2" fill="%2300337F"/><rect x="11" y="7" width="2" height="2" fill="%2300337F"/><rect x="3" y="10" width="2" height="2" fill="%2300337F"/><rect x="7" y="10" width="2" height="2" fill="%23CC0000"/><rect x="11" y="10" width="2" height="2" fill="%2300337F"/></svg>');
+}
+
+/* Windows XP 3D Gold Star */
+.xp-star {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23FFD700" stroke="%23B8860B" stroke-width="0.5" d="M8 0l2.4 5 5.6.8-4 4 1 5.6L8 13l-5 2.6 1-5.6-4-4 5.6-.8z"/></svg>');
+}
+
+/* Windows XP Search Lens */
+.xp-search {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="6.5" cy="6.5" r="4.5" fill="%23E8EEF5" stroke="%2300337F" stroke-width="1.5"/><path stroke="%2300337F" stroke-width="2" stroke-linecap="round" d="M10 10l4.5 4.5"/></svg>');
+}
+
+/* Windows XP CRT Computer */
+.xp-computer {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="1" y="1" width="11" height="9" rx="1" fill="%23E2E8F0" stroke="%2364748B"/><rect x="2.5" y="2.5" width="8" height="6" fill="%2300337F"/><path fill="%2364748B" d="M4 10h5l1 3H3zM1 14h11v1H1z"/><rect x="13" y="3" width="3" height="11" fill="%23CBD5E1" stroke="%2364748B"/></svg>');
+}
+
+/* Windows XP Robot / AI Assistant */
+.xp-robot {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="3" y="4" width="10" height="7" rx="1" fill="%23CBD5E1" stroke="%2300337F"/><circle cx="6" cy="7" r="1" fill="%23007A33"/><circle cx="10" cy="7" r="1" fill="%23007A33"/><path stroke="%2300337F" stroke-width="1" d="M6 9.5h4M8 1v3M8 11v4M2 7.5H1M15 7.5h-1"/></svg>');
+}
+
+/* MSN Messenger Yellow Smiley (:) */
+.xp-msn-smile {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23FFD700" stroke="%23D97706"/><circle cx="5.5" cy="6" r="1" fill="%23000"/><circle cx="10.5" cy="6" r="1" fill="%23000"/><path fill="none" stroke="%23000" stroke-width="1.2" stroke-linecap="round" d="M4.5 9.5a4 4 0 007 0"/></svg>');
+}
+
+/* MSN Messenger Laugh Smiley (:D) */
+.xp-msn-laugh {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="%23FFD700" stroke="%23D97706"/><circle cx="5.5" cy="5.5" r="1" fill="%23000"/><circle cx="10.5" cy="5.5" r="1" fill="%23000"/><path fill="%23000" d="M4 9c0 2.5 1.8 4 4 4s4-1.5 4-4H4z"/></svg>');
+}
+
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg-light);
+    background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+    background-size: 16px 16px;
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+/* Links */
+a {
+    color: var(--color-uv-blue);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--color-uv-green);
+}
+
+/* Retro Bevel Utilities */
+.bevel-box {
+    border-top: 2px solid var(--color-white);
+    border-left: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-uv-blue-dark);
+    border-right: 2px solid var(--color-uv-blue-dark);
+}
+
+.bevel-box-inset {
+    border-top: 2px solid var(--color-uv-blue-dark);
+    border-left: 2px solid var(--color-uv-blue-dark);
+    border-bottom: 2px solid var(--color-white);
+    border-right: 2px solid var(--color-white);
+}
+
+/* ==========================================================================
+   HEADER & MARQUEE
+   ========================================================================== */
+
+.retro-header {
+    background: var(--color-uv-blue);
+    background: linear-gradient(180deg, var(--color-uv-blue-dark) 0%, var(--color-uv-blue) 100%);
+    border-bottom: 4px solid var(--color-uv-green);
+    color: var(--color-white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.top-marquee-container {
+    background-color: var(--color-uv-green-dark);
+    border-bottom: 2px solid var(--color-uv-green);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+}
+
+.marquee-tag {
+    background: var(--color-white);
+    color: var(--color-uv-green-dark);
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+marquee {
+    flex-grow: 1;
+}
+
+.header-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mascot-img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-uv-green);
+    box-shadow: 0 0 10px rgba(0, 122, 51, 0.4);
+    background: var(--color-white);
+}
+
+.title-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-title {
+    font-family: var(--font-retro-heading);
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-white);
+    text-shadow: 2px 2px 0px #000, 3px 3px 0px var(--color-uv-green);
+    letter-spacing: -0.5px;
+}
+
+.uv-highlight {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+.site-tagline {
+    font-size: 12px;
+    color: #E2E8F0;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.site-badges-header {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.badge-mini {
+    background: var(--color-uv-blue-dark);
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+}
+
+.badge-green {
+    background: var(--color-uv-green);
+    border-color: #81C784;
+}
+
+.badge-orange {
+    background: #D97706;
+    border-color: #FCD34D;
+}
+
+/* Header Quick Search Box */
+.header-search-box {
+    background: var(--color-white);
+    border: 3px double var(--color-uv-blue);
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: var(--text-dark);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    min-width: 300px;
+}
+
+.search-title {
+    font-weight: bold;
+    font-size: 11px;
+    color: var(--color-uv-blue);
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.search-inputs {
+    display: flex;
+    gap: 5px;
+}
+
+.search-inputs input {
+    flex-grow: 1;
+    padding: 5px 8px;
+    border: 2px solid var(--color-uv-blue);
+    background: var(--color-white);
+    font-size: 12px;
+    font-family: var(--font-main);
+    color: var(--text-dark);
+}
+
+.search-filters {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 5px;
+    color: var(--color-uv-blue-dark);
+}
+
+/* Retro Navigation Tabs */
+.retro-nav {
+    background: var(--color-uv-blue-dark);
+    padding: 0 20px;
+    border-top: 2px solid var(--color-uv-green);
+}
+
+.nav-tabs {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    padding-top: 6px;
+}
+
+.tab-item {
+    background: var(--color-uv-blue-light);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid var(--color-uv-blue);
+    border-bottom: none;
+    margin-bottom: -2px;
+    transition: all 0.1s ease;
+}
+
+.tab-item a {
+    display: block;
+    padding: 7px 10px;
+    color: var(--color-uv-blue-dark);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11.5px;
+    white-space: nowrap;
+}
+
+.tab-item:hover {
+    background: var(--color-white);
+}
+
+.tab-item.active {
+    background: var(--color-white);
+    border-color: var(--color-uv-blue);
+    border-bottom: 2px solid var(--color-white);
+    z-index: 2;
+}
+
+.tab-item.active a {
+    color: var(--color-uv-green);
+}
+
+.tab-upload {
+    background: var(--color-uv-green);
+    border-color: var(--color-uv-green-dark);
+}
+
+.tab-upload a {
+    color: var(--color-white);
+}
+
+.tab-upload.active {
+    background: var(--color-uv-green);
+}
+.tab-upload.active a {
+    color: var(--color-white);
+}
+
+/* ==========================================================================
+   BUTTONS RETRO
+   ========================================================================== */
+
+.retro-btn {
+    background: var(--color-uv-blue-light);
+    border-top: 2px solid var(--color-white);
+    border-left: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-uv-blue-dark);
+    border-right: 2px solid var(--color-uv-blue-dark);
+    color: var(--color-uv-blue-dark);
+    font-family: var(--font-main);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    user-select: none;
+}
+
+.retro-btn:hover {
+    background: var(--color-white);
+}
+
+.retro-btn:active {
+    border-top: 2px solid var(--color-uv-blue-dark);
+    border-left: 2px solid var(--color-uv-blue-dark);
+    border-bottom: 2px solid var(--color-white);
+    border-right: 2px solid var(--color-white);
+    background: #CBD5E1;
+}
+
+.btn-search {
+    background: var(--color-uv-green);
+    color: var(--color-white);
+    border-color: #4CAF50 var(--color-uv-green-dark) var(--color-uv-green-dark) #4CAF50;
+}
+
+.btn-search:hover {
+    background: var(--color-uv-green-hover);
+}
+
+.btn-gold {
+    background: var(--color-uv-green);
+    color: var(--color-white);
+    border-color: #81C784 var(--color-uv-green-dark) var(--color-uv-green-dark) #81C784;
+}
+
+.btn-gold:hover {
+    background: var(--color-uv-green-hover);
+}
+
+.btn-green {
+    background: var(--color-uv-green);
+    color: var(--color-white);
+    border-color: #81C784 var(--color-uv-green-dark) var(--color-uv-green-dark) #81C784;
+}
+
+.btn-blue {
+    background: var(--color-uv-blue);
+    color: var(--color-white);
+    border-color: #60A5FA var(--color-uv-blue-dark) var(--color-uv-blue-dark) #60A5FA;
+}
+
+.btn-blue:hover {
+    background: var(--color-uv-blue-hover);
+}
+
+.btn-poll {
+    background: var(--color-uv-blue);
+    color: var(--color-white);
+    width: 100%;
+    margin-top: 8px;
+}
+
+.btn-sm {
+    padding: 3px 8px;
+    font-size: 11px;
+}
+
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* ==========================================================================
+   LAYOUT STRUCTURE (3 COLUMNS)
+   ========================================================================== */
+
+.main-container {
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 240px 1fr 240px;
+    gap: 15px;
+}
+
+/* Retro Cards */
+.retro-card {
+    background: var(--color-white);
+    border: 2px solid var(--color-uv-blue);
+    border-radius: 3px;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 0px rgba(0, 51, 127, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(180deg, var(--color-uv-blue) 0%, var(--color-uv-blue-dark) 100%);
+    color: var(--color-white);
+    padding: 6px 10px;
+    border-bottom: 2px solid var(--color-uv-blue-dark);
+}
+
+.card-header h3 {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+/* ==========================================================================
+   SIDEBAR LEFT
+   ========================================================================== */
+
+.category-list {
+    list-style: none;
+}
+
+.category-list li {
+    border-bottom: 1px dashed #CBD5E1;
+}
+
+.category-list li:last-child {
+    border-bottom: none;
+}
+
+.cat-link {
+    display: block;
+    padding: 5px 4px;
+    color: var(--color-uv-blue-dark);
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.cat-link:hover {
+    background: var(--color-uv-green-light);
+    color: var(--color-uv-green);
+    padding-left: 8px;
+}
+
+.cat-link.active {
+    font-weight: bold;
+    color: var(--color-uv-green);
+    background: var(--color-uv-green-light);
+}
+
+/* Semester Grid */
+.semester-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.sem-btn {
+    background: var(--color-uv-blue-light);
+    border: 1px solid var(--color-uv-blue);
+    padding: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--color-uv-blue-dark);
+    cursor: pointer;
+}
+
+.sem-btn:hover, .sem-btn.active {
+    background: var(--color-uv-green);
+    color: var(--color-white);
+    border-color: var(--color-uv-green-dark);
+}
+
+/* Poll Card */
+.poll-question {
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--color-uv-blue-dark);
+}
+
+.poll-option {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.poll-results {
+    margin-top: 10px;
+    font-size: 11px;
+    background: var(--color-uv-green-light);
+    border: 1px solid var(--color-uv-green);
+    padding: 8px;
+}
+
+.poll-bar-container {
+    margin-bottom: 6px;
+}
+
+.poll-bar-bg {
+    background: var(--color-white);
+    height: 12px;
+    border: 1px solid var(--color-uv-green);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.poll-bar-fill {
+    background: var(--color-uv-green);
+    height: 100%;
+}
+
+/* Vintage Badges Container */
+.badges-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+}
+
+.vintage-badge {
+    background: var(--color-uv-blue-dark);
+    color: #FFD700;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    padding: 4px 8px;
+    border: 2px inset var(--color-uv-blue);
+    text-align: center;
+    width: 100%;
+}
+
+.vintage-badge.orange {
+    color: #81C784;
+}
+.vintage-badge.green {
+    color: #FFFFFF;
+    background: var(--color-uv-green-dark);
+}
+.vintage-badge.blue {
+    color: #93C5FD;
+}
+
+/* ==========================================================================
+   CONTENT AREA & TABS
+   ========================================================================== */
+
+.content-area {
+    min-width: 0;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.welcome-box {
+    background: var(--color-white);
+    border: 2px solid var(--color-uv-blue);
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.welcome-box h2 {
+    font-size: 16px;
+    color: var(--color-uv-blue);
+    margin-bottom: 6px;
+}
+
+.welcome-box p {
+    font-size: 12px;
+    color: var(--text-dark);
+}
+
+/* Retro Stats Bar */
+.retro-stats-bar {
+    background: linear-gradient(180deg, var(--color-uv-blue-light) 0%, #DBEAFE 100%);
+    border: 2px solid var(--color-uv-blue);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.stat-item {
+    border-right: 1px dashed var(--color-uv-blue);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-num {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-uv-green);
+}
+
+.stat-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--color-uv-blue-dark);
+    font-weight: bold;
+}
+
+/* Featured Card */
+.featured-card {
+    border-color: var(--color-uv-green);
+}
+
+.badge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, var(--color-uv-green) 0%, var(--color-uv-green-dark) 100%);
+    color: var(--color-white);
+}
+
+.badge-star {
+    background: var(--color-white);
+    color: var(--color-uv-green-dark);
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.featured-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.featured-info h4 {
+    font-size: 14px;
+    color: var(--color-uv-blue);
+    margin: 6px 0;
+}
+
+.materia-tag {
+    background: var(--color-uv-blue);
+    color: var(--color-white);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.sem-tag {
+    background: var(--color-uv-green);
+    color: var(--color-white);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.meta-row {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+/* Notes Grid & Cards */
+.section-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0 8px 0;
+    border-bottom: 2px solid var(--color-uv-blue);
+    padding-bottom: 4px;
+}
+
+.section-title-bar h3 {
+    font-size: 14px;
+    color: var(--color-uv-blue);
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.note-item-card {
+    background: var(--color-white);
+    border: 1px solid #CBD5E1;
+    border-top: 3px solid var(--color-uv-blue);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+}
+
+.note-item-card:hover {
+    border-color: var(--color-uv-green);
+    background: var(--color-uv-green-light);
+}
+
+.note-item-card h5 {
+    font-size: 12px;
+    color: var(--color-uv-blue);
+    margin: 4px 0;
+}
+
+.note-item-card p {
+    font-size: 11px;
+    color: #475569;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.note-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: #64748B;
+    margin-top: 6px;
+    border-top: 1px solid #F1F5F9;
+    padding-top: 4px;
+}
+
+/* Notice List */
+.tips-list {
+    padding-left: 20px;
+    font-size: 11px;
+}
+
+.tips-list li {
+    margin-bottom: 6px;
+}
+
+/* Filter Toolbar */
+.filter-toolbar {
+    background: var(--color-uv-blue-light);
+    border: 1px solid var(--color-uv-blue);
+    padding: 8px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.filter-group input, .filter-group select {
+    padding: 4px 6px;
+    border: 1px solid var(--color-uv-blue);
+    font-size: 11px;
+    background: var(--color-white);
+}
+
+.notes-full-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note-row-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-uv-blue);
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.note-row-card:hover {
+    background: var(--color-uv-green-light);
+}
+
+.note-row-info h4 {
+    font-size: 13px;
+    color: var(--color-uv-blue);
+    margin: 2px 0;
+}
+
+.note-row-info p {
+    font-size: 11px;
+    color: #334155;
+}
+
+/* Exámenes List */
+.exam-item-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-uv-blue);
+    border-left: 5px solid var(--color-uv-green);
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exam-info h4 {
+    font-size: 13px;
+    color: var(--color-uv-blue);
+}
+
+/* Profesores Grid */
+.profesores-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.profesores-toolbar input {
+    flex-grow: 1;
+    padding: 6px;
+    border: 1px solid var(--color-uv-blue);
+}
+
+.profesores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+}
+
+.prof-card {
+    background: var(--color-white);
+    border: 2px solid var(--color-uv-blue);
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.prof-name {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--color-uv-blue);
+}
+
+.prof-materia {
+    font-size: 11px;
+    color: var(--color-uv-green);
+    margin-bottom: 6px;
+}
+
+.prof-tags {
+    display: flex;
+    gap: 4px;
+    margin: 6px 0;
+}
+
+.prof-badge {
+    font-size: 9px;
+    padding: 1px 5px;
+    background: var(--color-uv-blue-light);
+    border: 1px solid var(--color-uv-blue);
+}
+
+.prof-comment-box {
+    font-size: 11px;
+    font-style: italic;
+    background: var(--color-bg-light);
+    border: 1px dashed #94A3B8;
+    padding: 6px;
+    margin-top: 6px;
+}
+
+/* Forum Feed */
+.new-post-card {
+    margin-bottom: 15px;
+}
+
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.new-post-card input, .new-post-card select, .new-post-card textarea,
+.upload-form-card input, .upload-form-card select, .upload-form-card textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--color-uv-blue);
+    font-family: var(--font-main);
+    font-size: 11px;
+    background: var(--color-white);
+}
+
+.forum-post {
+    background: var(--color-white);
+    border: 1px solid var(--color-uv-blue);
+    border-top: 3px solid var(--color-uv-green);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.forum-post-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--text-muted);
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.forum-author {
+    font-weight: bold;
+    color: var(--color-uv-blue);
+}
+
+.forum-tag {
+    background: var(--color-uv-blue);
+    color: var(--color-white);
+    padding: 1px 5px;
+    border-radius: 2px;
+}
+
+.forum-text {
+    font-size: 11px;
+    color: var(--text-dark);
+}
+
+/* Tools, Books & News Grid */
+.tools-grid, .books-grid, .news-feed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.tool-card p {
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+/* News Status & Sync Card */
+.news-status-card {
+    border-color: var(--color-uv-green);
+    background: var(--color-uv-green-light);
+    margin-bottom: 15px;
+}
+
+.news-status-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 11px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pulse-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-uv-green);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 rgba(0, 122, 51, 0.6);
+    animation: pulseGlow 1.8s infinite;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 122, 51, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(0, 122, 51, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 122, 51, 0);
+    }
+}
+
+.book-request-card input, .book-request-card select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--color-uv-blue);
+    font-family: var(--font-main);
+    font-size: 11px;
+    background: var(--color-white);
+}
+
+/* Book Details Card Styling */
+.book-item-card {
+    background: var(--color-white);
+    transition: transform 0.1s ease, border-color 0.1s ease;
+}
+
+.book-item-card:hover {
+    border-color: var(--color-uv-green);
+}
+
+.book-badges-row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.book-detail-table {
+    background: var(--color-bg-light);
+    border: 1px dashed var(--color-uv-blue);
+    padding: 6px 8px;
+    margin: 8px 0;
+    font-size: 11px;
+}
+
+.book-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+    border-bottom: 1px dotted #CBD5E1;
+}
+
+.book-detail-row:last-child {
+    border-bottom: none;
+}
+
+.book-detail-label {
+    color: var(--text-muted);
+}
+
+.book-detail-val {
+    color: var(--color-uv-blue-dark);
+}
+
+/* Interactive News Card Styling */
+.news-card-interactive {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    background: var(--color-white);
+}
+
+.news-card-interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 10px rgba(0, 51, 127, 0.2);
+    border-color: var(--color-uv-green);
+}
+
+.news-meta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 10px;
+}
+
+.news-time-tag {
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+.news-title-link {
+    font-size: 13px;
+    color: var(--color-uv-blue);
+    margin: 4px 0;
+    line-height: 1.3;
+}
+
+.news-card-interactive:hover .news-title-link {
+    color: var(--color-uv-green);
+    text-decoration: underline;
+}
+
+.news-excerpt-text {
+    font-size: 11px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* APA Citation Box */
+.apa-citation-box {
+    background: #F8FAFC;
+    border-left: 3px solid var(--color-uv-blue);
+    padding: 6px 8px;
+    margin-top: 8px;
+    font-size: 10px;
+}
+
+.apa-label {
+    font-weight: bold;
+    color: var(--color-uv-blue-dark);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.apa-text {
+    font-style: italic;
+    color: #475569;
+    font-family: var(--font-mono);
+    line-height: 1.3;
+    margin: 0;
+    word-break: break-word;
+}
+
+/* Upload Form */
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.modal-body-content input,
+.modal-body-content select,
+.modal-body-content textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid var(--color-uv-blue);
+    font-family: var(--font-main);
+    font-size: 11px;
+    background: var(--color-white);
+}
+
+.form-group textarea,
+.modal-body-content textarea {
+    min-height: 180px;
+    font-family: var(--font-mono), monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.help-text {
+    font-size: 10px;
+    color: #64748B;
+    display: block;
+    margin-top: 2px;
+}
+
+/* Note Submission Helper Styles */
+.template-badges-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+    background: #F1F5F9;
+    padding: 6px;
+    border: 1px dashed var(--color-uv-blue);
+    border-radius: 3px;
+    align-items: center;
+}
+
+.template-badge-btn {
+    background: var(--color-white);
+    border: 1px solid var(--color-uv-blue);
+    font-size: 10px;
+    font-family: var(--font-main);
+    padding: 3px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+    color: var(--color-uv-blue-dark);
+    font-weight: bold;
+    transition: all 0.15s ease;
+}
+
+.template-badge-btn:hover {
+    background: var(--color-uv-blue-light);
+    color: var(--color-uv-blue-dark);
+}
+
+.format-toolbar {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+    background: #E2E8F0;
+    padding: 4px;
+    border: 1px solid #CBD5E1;
+    border-bottom: none;
+}
+
+.format-btn {
+    background: var(--color-white);
+    border: 1px solid #94A3B8;
+    font-size: 10px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--color-uv-blue-dark);
+}
+
+.format-btn:hover {
+    background: var(--color-uv-green-light);
+}
+
+.editor-counter-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+
+/* ==========================================================================
+   SIDEBAR RIGHT
+   ========================================================================== */
+
+.top-ranking-list {
+    padding-left: 18px;
+    font-size: 11px;
+}
+
+.top-ranking-list li {
+    margin-bottom: 6px;
+}
+
+.top-ranking-list a {
+    font-weight: bold;
+    color: var(--color-uv-blue);
+}
+
+.card-quote blockquote {
+    font-style: italic;
+    font-size: 11px;
+    color: var(--color-uv-blue-dark);
+    border-left: 3px solid var(--color-uv-green);
+    padding-left: 8px;
+    margin-bottom: 4px;
+}
+
+.quote-author {
+    font-size: 10px;
+    color: var(--text-muted);
+    display: block;
+    text-align: right;
+}
+
+.bullet-notice-list {
+    padding-left: 15px;
+    font-size: 10px;
+}
+
+.bullet-notice-list li {
+    margin-bottom: 5px;
+}
+
+.counter-box {
+    text-align: center;
+}
+
+.counter-label {
+    font-size: 10px;
+    color: var(--color-uv-blue-dark);
+    margin-bottom: 4px;
+}
+
+.odometer {
+    font-family: 'VT323', 'Press Start 2P', monospace;
+    font-size: 24px;
+    background: #000000;
+    color: #00FF00;
+    padding: 4px 10px;
+    border: 3px inset #555;
+    letter-spacing: 4px;
+    display: inline-block;
+}
+
+.sound-toggle-box {
+    margin-top: 8px;
+    font-size: 10px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.retro-footer {
+    background: var(--color-uv-blue-dark);
+    color: var(--color-white);
+    border-top: 4px solid var(--color-uv-green);
+    padding: 20px 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.footer-subtext {
+    font-size: 10px;
+    color: #93C5FD;
+    margin: 5px 0 10px 0;
+}
+
+.footer-links a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   MODAL WINDOWS RETRO
+   ========================================================================== */
+
+.retro-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 15px;
+}
+
+.retro-modal-backdrop.hidden {
+    display: none;
+}
+
+.retro-modal-window {
+    background: var(--color-white);
+    border: 3px solid var(--color-uv-blue);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 720px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-sm {
+    max-width: 480px;
+}
+
+.modal-title-bar {
+    background: linear-gradient(180deg, var(--color-uv-blue) 0%, var(--color-uv-blue-dark) 100%);
+    color: var(--color-white);
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.modal-close-btn {
+    background: #C0392B;
+    color: #FFF;
+    border: 1px solid #FFF;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1px 6px;
+    font-size: 11px;
+}
+
+.modal-close-btn:hover {
+    background: #FF0000;
+}
+
+.modal-body-content {
+    padding: 15px;
+    overflow-y: auto;
+}
+
+/* Paper Note Styling in Modal */
+.note-paper-container {
+    background: #FAFAFA;
+    border: 1px solid var(--color-uv-blue);
+    padding: 20px;
+    font-family: var(--font-mono);
+    line-height: 1.6;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.paper-header h2 {
+    font-family: var(--font-main);
+    color: var(--color-uv-blue);
+    font-size: 16px;
+}
+
+.paper-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.paper-badge {
+    background: var(--color-uv-blue);
+    color: var(--color-white);
+    font-size: 10px;
+    padding: 1px 6px;
+    font-family: var(--font-main);
+}
+
+.paper-author {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--font-main);
+}
+
+.paper-divider {
+    border: none;
+    border-top: 1px dashed var(--color-uv-blue);
+    margin: 12px 0;
+}
+
+.paper-text {
+    font-size: 12px;
+    color: #1A1A1A;
+    white-space: pre-wrap;
+}
+
+.paper-actions-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: var(--font-main);
+}
+
+.calc-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 10px 0;
+}
+
+.calc-val {
+    padding: 5px;
+    border: 1px solid var(--color-uv-blue);
+}
+
+.calc-result-box {
+    margin-top: 10px;
+    background: var(--color-uv-green-light);
+    border: 2px solid var(--color-uv-green);
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-uv-green-dark);
+}
+
+.calc-result-box.hidden {
+    display: none;
+}
+
+.panel-header-bar {
+    background: var(--color-white);
+    border: 2px solid var(--color-uv-blue);
+    padding: 10px 14px;
+    margin-bottom: 15px;
+}
+
+.panel-header-bar h2 {
+    font-size: 15px;
+    color: var(--color-uv-blue);
+}
+
+.panel-header-bar p {
+    font-size: 11px;
+    color: #475569;
+}
+
+/* High Contrast Override for Panel Headers with Dark/Green Backgrounds */
+.panel-header-bar[style*="background"] h2,
+.panel-header-bar.header-green h2,
+.panel-header-bar.header-blue h2 {
+    color: #FFFFFF !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.panel-header-bar[style*="background"] p,
+.panel-header-bar.header-green p,
+.panel-header-bar.header-blue p {
+    color: #FFFFFF !important;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Active Filter Badges Styling */
+.active-filter-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    background: #F1F5F9;
+    border: 1px solid #CBD5E1;
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.filter-badge-item {
+    background: var(--color-uv-blue);
+    color: var(--color-white);
+    padding: 2px 8px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+.filter-badge-item .close-badge {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+}
+
+.filter-badge-item .close-badge:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.btn-reset-filters {
+    background: #E2E8F0;
+    color: #334155;
+    border: 1px solid #94A3B8;
+    padding: 2px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.btn-reset-filters:hover {
+    background: var(--color-uv-green);
+    color: var(--color-white);
+    border-color: var(--color-uv-green-dark);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar-left, .sidebar-right {
+        order: 2;
+    }
+    
+    .content-area {
+        order: 1;
+    }
+
+    .header-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        flex-direction: column;
+    }
+
+    .header-search-box {
+        width: 100%;
+    }
+
+    .nav-tabs {
+        justify-content: center;
+    }
+}
